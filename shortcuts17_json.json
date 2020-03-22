@@ -1,0 +1,3612 @@
+{
+  "categories": [
+    {
+      "background": "white",
+      "id": "01319423-3fa5-41a7-a24a-1515e2ab00e8",
+      "layoutType": "linear_list",
+      "name": "Исходник",
+      "shortcuts": [
+        {
+          "acceptAllCertificates": false,
+          "authentication": "none",
+          "bodyContent": "",
+          "codeOnFailure": "showToast(\"Чет все пошло не по плану (\");",
+          "codeOnPrepare": "const n1 \u003d getVariable(/*[variable]*/\"3f7cf2c0-7116-4118-a079-e464bd8b0aca\"/*[/variable]*/); setVariable(/*[variable]*/\"5f357e5d-331b-425f-9c26-eccc08b3cc31\"/*[/variable]*/, n1)",
+          "codeOnSuccess": "const t1 \u003d JSON.parse(response.body).token; setVariable(/*[variable]*/\"9818c9c2-7ce7-44fc-8b87-4acad404cd39\"/*[/variable]*/, t1)\nshowToast(\"Ну вроде все ок \");",
+          "contentType": "text/plain",
+          "delay": 0,
+          "description": "Ваш номер с 9 и пароль",
+          "executionType": "app",
+          "feedback": "none",
+          "followRedirects": true,
+          "headers": [
+            {
+              "id": "ae31e393-b26b-45d4-a3ba-c0e6a296a55e",
+              "key": "User-Agent",
+              "value": "MyBeeline/4.12.0-930"
+            }
+          ],
+          "iconName": "flat_color_key",
+          "id": "48a1c85d-fbbf-475b-b3cd-b38b226cf668",
+          "launcherShortcut": false,
+          "method": "GET",
+          "name": "Авторизация",
+          "parameters": [],
+          "password": "",
+          "requestBodyType": "x_www_form_urlencode",
+          "requireConfirmation": false,
+          "retryPolicy": "none",
+          "timeout": 10000,
+          "url": "https://api.beeline.ru/mw/auth/1/auth?client_id\u003dmybee\u0026login\u003d{{3f7cf2c0-7116-4118-a079-e464bd8b0aca}}\u0026password\u003d{{216c396a-ddaf-49f7-a8e7-9e9d82dbabd7}}",
+          "username": ""
+        },
+        {
+          "acceptAllCertificates": false,
+          "authentication": "none",
+          "bodyContent": "\u003csoapenv:Envelope xmlns:soapenv\u003d\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:urn\u003d\"urn:uss-wsapi:Subscriber\"\u003e\n   \u003csoapenv:Header/\u003e\n   \u003csoapenv:Body\u003e\n      \u003curn:addDelSOC\u003e\n         \u003c!--Optional:--\u003e\n         \u003ctoken\u003e{{9818c9c2-7ce7-44fc-8b87-4acad404cd39}}\u003c/token\u003e\n         \u003c!--Optional:--\u003e\n         \u003chash\u003e?\u003c/hash\u003e\n         \u003c!--Optional:--\u003e\n         \u003clogin\u003e?\u003c/login\u003e\n         \u003c!--Optional:--\u003e\n         \u003cctn\u003e{{5f357e5d-331b-425f-9c26-eccc08b3cc31}}\u003c/ctn\u003e\n         \u003c!--Optional:--\u003e\n         \u003csoc\u003e{{8887be09-adef-4478-9d7d-e6816ec7d9b2}}\u003c/soc\u003e\n         \u003c!--Optional:--\u003e\n         \u003cinclusionType\u003e{{39205697-96cb-4a6a-8562-fcf3c7ce96d7}}\u003c/inclusionType\u003e\n         \u003c!--Optional:--\u003e\n         \u003ceffDate\u003e{{254e0854-00b0-491b-886e-cddb2efc64b4}}\u003c/effDate\u003e\n         \u003c!--Optional:--\u003e\n         \u003cexpDate\u003e{{9c1de73e-2202-45f2-ae74-348ba965db72}}\u003c/expDate\u003e\n      \u003c/urn:addDelSOC\u003e\n   \u003c/soapenv:Body\u003e\n\u003c/soapenv:Envelope\u003e",
+          "codeOnFailure": "",
+          "codeOnPrepare": "",
+          "codeOnSuccess": "",
+          "contentType": "text/xml",
+          "delay": 0,
+          "description": "",
+          "executionType": "app",
+          "feedback": "dialog",
+          "followRedirects": true,
+          "headers": [],
+          "iconName": "flat_color_compose",
+          "id": "1eaccb02-1985-4fd0-89a2-403ef7e417a0",
+          "launcherShortcut": false,
+          "method": "POST",
+          "name": "Подключение услуг",
+          "parameters": [],
+          "password": "",
+          "requestBodyType": "custom_text",
+          "requireConfirmation": false,
+          "retryPolicy": "none",
+          "timeout": 60000,
+          "url": "https://my.beeline.ru:443/api/SubscriberService",
+          "username": ""
+        },
+        {
+          "acceptAllCertificates": false,
+          "authentication": "none",
+          "bodyContent": "",
+          "codeOnFailure": "",
+          "codeOnPrepare": "",
+          "codeOnSuccess": "",
+          "contentType": "text/plain",
+          "delay": 0,
+          "description": "",
+          "executionType": "app",
+          "feedback": "simple_response",
+          "followRedirects": true,
+          "headers": [
+            {
+              "id": "6dfac2f6-8461-4996-8cb5-6b77498f1634",
+              "key": "X-Auth-Token",
+              "value": "{{dbde882d-5c87-4980-a9e3-1066123579e1}}"
+            }
+          ],
+          "iconName": "flat_color_tools",
+          "id": "e9236093-8be1-4f34-acd4-f8b367ce74f2",
+          "launcherShortcut": false,
+          "method": "GET",
+          "name": "Смена тарифа",
+          "parameters": [],
+          "password": "",
+          "requestBodyType": "x_www_form_urlencode",
+          "requireConfirmation": false,
+          "retryPolicy": "none",
+          "timeout": 10000,
+          "url": "https://api.beeline.ru/mw/request/1/changePricePlan?pricePlan\u003d{{d9140f16-4697-4db0-91fb-bc39e1c7764d}}{{aeaaafda-fa1e-40c5-8215-d42c9e1dfd63}}",
+          "username": ""
+        },
+        {
+          "acceptAllCertificates": false,
+          "authentication": "none",
+          "bodyContent": "",
+          "codeOnFailure": "",
+          "codeOnPrepare": "",
+          "codeOnSuccess": "",
+          "contentType": "text/plain",
+          "delay": 0,
+          "description": "",
+          "executionType": "app",
+          "feedback": "simple_response",
+          "followRedirects": true,
+          "headers": [
+            {
+              "id": "7a2d9430-76c7-4228-bb4a-523bc199f06c",
+              "key": "Cookie",
+              "value": "token\u003d{{9818c9c2-7ce7-44fc-8b87-4acad404cd39}}"
+            }
+          ],
+          "iconName": "flat_color_tools",
+          "id": "62c02f6d-48c4-4d30-b94b-8d77ea0a3163",
+          "launcherShortcut": false,
+          "method": "GET",
+          "name": "Смена тарифа ( Метод √2)",
+          "parameters": [],
+          "password": "",
+          "requestBodyType": "x_www_form_urlencode",
+          "requireConfirmation": false,
+          "retryPolicy": "none",
+          "timeout": 10000,
+          "url": "https://my.beeline.ru/api/1.0/request/changePricePlan?ctn\u003d{{5f357e5d-331b-425f-9c26-eccc08b3cc31}}\u0026pricePlan\u003d{{d9140f16-4697-4db0-91fb-bc39e1c7764d}}{{aeaaafda-fa1e-40c5-8215-d42c9e1dfd63}}",
+          "username": ""
+        },
+        {
+          "acceptAllCertificates": false,
+          "authentication": "none",
+          "bodyContent": "",
+          "codeOnFailure": "",
+          "codeOnPrepare": "",
+          "codeOnSuccess": "",
+          "contentType": "text/plain",
+          "delay": 0,
+          "description": "",
+          "executionType": "app",
+          "feedback": "activity",
+          "followRedirects": true,
+          "headers": [
+            {
+              "id": "b3e25fb2-de73-4cd3-9788-7b11c3773ca3",
+              "key": "X-API-Token",
+              "value": "{{9818c9c2-7ce7-44fc-8b87-4acad404cd39}}"
+            }
+          ],
+          "iconName": "flat_color_clipboard",
+          "id": "e51b7088-8dfc-404f-bdda-b3333f646be2",
+          "launcherShortcut": false,
+          "method": "GET",
+          "name": "Список подключенных услуг",
+          "parameters": [],
+          "password": "",
+          "requestBodyType": "x_www_form_urlencode",
+          "requireConfirmation": false,
+          "retryPolicy": "none",
+          "timeout": 10000,
+          "url": "https://my.beeline.ru/api/1.0/info/serviceList?ctn\u003d{{5f357e5d-331b-425f-9c26-eccc08b3cc31}}",
+          "username": ""
+        },
+        {
+          "acceptAllCertificates": false,
+          "authentication": "none",
+          "bodyContent": "",
+          "codeOnFailure": "",
+          "codeOnPrepare": "",
+          "codeOnSuccess": "",
+          "contentType": "text/plain",
+          "delay": 0,
+          "description": "",
+          "executionType": "app",
+          "feedback": "activity",
+          "followRedirects": true,
+          "headers": [
+            {
+              "id": "7caa763f-5c5d-4181-a7d4-008f966a0f78",
+              "key": "X-API-Token",
+              "value": "{{9818c9c2-7ce7-44fc-8b87-4acad404cd39}}"
+            }
+          ],
+          "iconName": "flat_color_caution",
+          "id": "0f829ec7-59d2-4516-833b-794b1ca547e9",
+          "launcherShortcut": false,
+          "method": "GET",
+          "name": "Информация по тарифу",
+          "parameters": [],
+          "password": "",
+          "requestBodyType": "x_www_form_urlencode",
+          "requireConfirmation": false,
+          "retryPolicy": "none",
+          "timeout": 10000,
+          "url": "https://my.beeline.ru/api/1.0/info/pricePlan?ctn\u003d{{5f357e5d-331b-425f-9c26-eccc08b3cc31}}",
+          "username": ""
+        },
+        {
+          "acceptAllCertificates": false,
+          "authentication": "none",
+          "bodyContent": "",
+          "codeOnFailure": "",
+          "codeOnPrepare": "",
+          "codeOnSuccess": "",
+          "contentType": "application/json",
+          "delay": 0,
+          "description": "По soc и список",
+          "executionType": "app",
+          "feedback": "activity",
+          "followRedirects": true,
+          "headers": [
+            {
+              "id": "e9a0a759-46ec-47ab-a671-c81d76a740aa",
+              "key": "X-API-Token",
+              "value": "{{9818c9c2-7ce7-44fc-8b87-4acad404cd39}}"
+            }
+          ],
+          "iconName": "flat_color_stop",
+          "id": "0572e404-029f-4e81-af06-3d4e59fbd374",
+          "launcherShortcut": false,
+          "method": "GET",
+          "name": "Проверка услуги / тарифа",
+          "parameters": [],
+          "password": "",
+          "requestBodyType": "form_data",
+          "requireConfirmation": false,
+          "retryPolicy": "none",
+          "timeout": 10000,
+          "url": "https://my.beeline.ru/api/1.0/info/conflict?ctn\u003d{{5f357e5d-331b-425f-9c26-eccc08b3cc31}}\u0026soc\u003d{{d9140f16-4697-4db0-91fb-bc39e1c7764d}}",
+          "username": ""
+        },
+        {
+          "acceptAllCertificates": false,
+          "authentication": "none",
+          "bodyContent": "",
+          "codeOnFailure": "",
+          "codeOnPrepare": "",
+          "codeOnSuccess": "",
+          "contentType": "text/plain",
+          "delay": 0,
+          "description": "",
+          "executionType": "app",
+          "feedback": "dialog",
+          "followRedirects": true,
+          "headers": [
+            {
+              "id": "4a5f506a-f191-4372-a07a-56bc33c28482",
+              "key": "X-API-Token",
+              "value": "{{9818c9c2-7ce7-44fc-8b87-4acad404cd39}}"
+            }
+          ],
+          "iconName": "flat_color_money",
+          "id": "ef3ab63e-eea1-419e-aa1a-03e783b381cf",
+          "launcherShortcut": false,
+          "method": "GET",
+          "name": "Ваш баланс ",
+          "parameters": [],
+          "password": "",
+          "requestBodyType": "x_www_form_urlencode",
+          "requireConfirmation": false,
+          "retryPolicy": "none",
+          "timeout": 10000,
+          "url": "https://my.beeline.ru/api/1.0/info/prepaidBalance?ctn\u003d{{5f357e5d-331b-425f-9c26-eccc08b3cc31}}",
+          "username": ""
+        },
+        {
+          "acceptAllCertificates": false,
+          "authentication": "none",
+          "bodyContent": "",
+          "codeOnFailure": "",
+          "codeOnPrepare": "",
+          "codeOnSuccess": "",
+          "contentType": "text/plain",
+          "delay": 0,
+          "description": "",
+          "executionType": "app",
+          "feedback": "simple_response",
+          "followRedirects": true,
+          "headers": [],
+          "iconName": "flat_color_locked",
+          "id": "991bb468-f745-423f-af35-9b653a8e4d38",
+          "launcherShortcut": false,
+          "method": "PUT",
+          "name": "Смена пароля",
+          "parameters": [],
+          "password": "",
+          "requestBodyType": "x_www_form_urlencode",
+          "requireConfirmation": false,
+          "retryPolicy": "none",
+          "timeout": 10000,
+          "url": "https://my.beeline.ru/api/1.0/setting/changePassword?login\u003d{{3f7cf2c0-7116-4118-a079-e464bd8b0aca}}\u0026oldPassword\u003d{{216c396a-ddaf-49f7-a8e7-9e9d82dbabd7}}\u0026newPassword\u003d{{082723ad-14cf-4a1c-92dd-b990892f8132}}",
+          "username": ""
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "flags": 0,
+      "id": "61876e0a-15ab-4da3-b334-b3e8c76eaa41",
+      "jsonEncode": false,
+      "key": "tariflist2",
+      "options": [
+        {
+          "id": "1e75c171-1ee5-45c4-acec-b56576bee845",
+          "label": "Поговорим",
+          "value": "{{a5a38c9f-395c-406c-9e43-8d48fba73fab}}"
+        },
+        {
+          "id": "843424a2-0830-4352-bb00-431758cbc112",
+          "label": "Все за 90",
+          "value": "{{e8e874c9-9834-4ab9-86b9-e4f731eb6a3c}}"
+        },
+        {
+          "id": "98b6f943-29f6-40ae-b40a-7b7c687e7cdf",
+          "label": "Все только для своих",
+          "value": "{{c767bc2b-7949-427a-a562-a5f6511126c1}}"
+        },
+        {
+          "id": "4e740239-8bcb-4447-964f-4d5d7af8971d",
+          "label": "Все только для своих 2Х",
+          "value": "{{31068a82-beac-4dc7-bad4-85959b1ff0da}}"
+        },
+        {
+          "id": "6624857d-f79f-4cdd-a571-8663d8e3e518",
+          "label": "Все только для своих 3Х",
+          "value": "{{255b6629-cd46-4e71-ab91-596211ed3411}}"
+        },
+        {
+          "id": "4f6bf87c-0543-439e-bc70-61da3b10d01d",
+          "label": "Би +",
+          "value": "{{01c701a9-e348-433d-8685-67cb46139e4e}}"
+        },
+        {
+          "id": "ed24381c-7757-4f0f-b85a-83bb5f964dcc",
+          "label": "Секунда",
+          "value": "{{441ddc16-751a-4c0a-9bd1-654812c7de2b}}"
+        },
+        {
+          "id": "e05d2ae7-3bce-48f4-a15e-101629cbc865",
+          "label": "Семья",
+          "value": "{{2c6fb305-b63d-440f-8dd5-1fb082250e32}}"
+        },
+        {
+          "id": "6041800a-e31a-4b4b-82c1-103e2352ef7a",
+          "label": "Семья +",
+          "value": "{{9dea63f9-e683-4af2-bc82-3d1d32c95e3d}}"
+        },
+        {
+          "id": "8797fe76-37f9-4541-b15f-36ea341da157",
+          "label": "Супер семья",
+          "value": "{{a2bcbd63-0922-4c5c-84ae-1baf4ac08b44}}"
+        },
+        {
+          "id": "930872f6-ee95-4fed-9ea5-16cd3a01cbf0",
+          "label": "Супер семья +",
+          "value": "{{7c9adb94-310b-40ea-8ca7-2b98db138700}}"
+        },
+        {
+          "id": "199e9294-f45f-4200-95ec-03505e3c82b8",
+          "label": "Все для семьи",
+          "value": "{{9b5c2c5f-c13e-49c5-a1cd-6ec93a431117}}"
+        },
+        {
+          "id": "be64c310-6e8a-4273-8d8c-b96ece59761f",
+          "label": "Семья Акция ",
+          "value": "{{63dbebf8-7b67-4d17-beb2-145c16860091}}"
+        },
+        {
+          "id": "6f992903-7ee9-4a8b-806c-5a1d54b3560d",
+          "label": "Первые гиги",
+          "value": "SPG95_7"
+        },
+        {
+          "id": "db78a177-c6b9-4929-98bf-df6b76a00fdf",
+          "label": "Первые гиги +",
+          "value": "SPGP96_4"
+        },
+        {
+          "id": "43306558-efe1-432b-a708-9a60584d71e5",
+          "label": "Анлим 03.2019",
+          "value": "04RAPID1"
+        },
+        {
+          "id": "18766a2a-c81d-44f5-8cee-8659f8c7ec71",
+          "label": "Все Мое 2 (Для ПК)",
+          "value": "CLGDPC_2"
+        },
+        {
+          "id": "6eb68e93-6d88-48d6-bc20-8f45313e778c",
+          "label": "Все за 240",
+          "value": "08ALL240"
+        },
+        {
+          "id": "eac74d91-500e-41d4-90ee-b347e76f8f4e",
+          "label": "Все за 450",
+          "value": ""
+        },
+        {
+          "id": "9a41d8da-a50a-4743-b065-e87278226b0d",
+          "label": "Все за 500",
+          "value": "74TMVSE3"
+        },
+        {
+          "id": "c1a96081-e5fe-47b3-8b5a-f0b6a2dbb656",
+          "label": "Все за 100 Эксклюзивный",
+          "value": "04MNPVSE1"
+        },
+        {
+          "id": "a92b4ba6-2738-455d-bb0a-1e1a78374641",
+          "label": "Все за 200 Эксклюзивный ",
+          "value": "04MNPVSE2"
+        },
+        {
+          "id": "8f1e02fa-34db-45f1-9350-9d0f96623cec",
+          "label": "Специальный",
+          "value": "CMS1SOC19"
+        },
+        {
+          "id": "991027bf-377f-4e01-9600-37030559c7a8",
+          "label": "Специальный (Спб)",
+          "value": "W1SOC19"
+        },
+        {
+          "id": "b44dae75-0240-40f9-99f3-a285d2db6fcb",
+          "label": "Близкие люди 1",
+          "value": "{{e01f4fba-2280-43d0-b8c8-02413b4416f5}}"
+        },
+        {
+          "id": "f9abd375-9117-4e60-94c9-8eb5a8ec8494",
+          "label": "Близкие люди 2",
+          "value": "{{b228392d-81bd-4fc1-a3b6-f1843d8a5c73}}"
+        },
+        {
+          "id": "e62ee076-5524-40dc-ae51-1de426ef1e34",
+          "label": "Близкие люди 3",
+          "value": "{{aac242b3-0d7a-4782-8ce5-46b42ab7eed5}}"
+        },
+        {
+          "id": "e5babbce-3e1f-472a-a81a-b990463589c4",
+          "label": "Близкие люди 4",
+          "value": "{{34202ae0-09cf-4c55-a31b-8a3c9f9dffbd}}"
+        },
+        {
+          "id": "ab6b18ad-8df7-443c-9949-b062602abcad",
+          "label": "Близкие люди 5",
+          "value": "{{39ea91ad-cdc2-4ebd-a1eb-8f817ab3d3b3}}"
+        },
+        {
+          "id": "9f203567-5b16-4743-bc01-c08fd219b508",
+          "label": "Близкие люди 6",
+          "value": "{{104713f5-46ce-4ba3-b823-6744adea2637}}"
+        },
+        {
+          "id": "4ee162b1-5d17-4de9-848b-319524f9d40a",
+          "label": "Все за 1800 + роуминг",
+          "value": "{{5cc739cc-1cc8-47de-8c9e-762b01f0e935}}"
+        },
+        {
+          "id": "5d239b04-c50c-494e-bffc-19c92c3273cc",
+          "label": "Для компьютера",
+          "value": "{{bd3a4ca7-6126-4aaa-ab4a-e65423dad2dd}}"
+        },
+        {
+          "id": "3354d3f8-1dfd-4662-97e6-3a404d07428a",
+          "label": "Все Мое 2",
+          "value": "{{6f7771d1-81de-4101-957c-31cfa9af02c5}}"
+        },
+        {
+          "id": "03f02454-7369-4412-b041-7d46cf918048",
+          "label": "Все Мое 3",
+          "value": "{{96b903c1-aae3-499d-b2e3-fc9090f42c4d}}"
+        },
+        {
+          "id": "2fbd829e-d735-4749-896c-f51ef0f8c727",
+          "label": "Все Мое 4",
+          "value": "{{266100d2-1ed5-4553-a0c2-e2180024b6e5}}"
+        },
+        {
+          "id": "eff73cc8-1e8d-4dd2-9a5b-b5fd18bf826b",
+          "label": "Двойной Анлим",
+          "value": "{{6ea4c6b8-bfc9-4250-88d0-a0d2eef58f48}}"
+        },
+        {
+          "id": "79e0dc3c-0d2f-424a-a175-1082bfe5c9f1",
+          "label": "Супер Анлим",
+          "value": "{{fc9c9ec8-c009-4d7b-a758-407ad8147c1b}}"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите тариф",
+      "type": "select",
+      "urlEncode": true,
+      "value": "{{255b6629-cd46-4e71-ab91-596211ed3411}}"
+    },
+    {
+      "flags": 0,
+      "id": "b607602a-16a4-4546-85ba-b45c0489d61d",
+      "jsonEncode": false,
+      "key": "discountlist2",
+      "options": [
+        {
+          "id": "5eb18253-1cae-49fe-85cd-4911b5a3f454",
+          "label": "Скидка 5% на АП (12 мес/ЦМ) (12TMDIS05)",
+          "value": "12TMDIS"
+        },
+        {
+          "id": "2f95dc9d-6a7e-4582-ad1b-675646e20638",
+          "label": "Скидка 10% на АП (12 мес/ЦМ) (12TMDIS10)",
+          "value": "12TMDIS"
+        },
+        {
+          "id": "1b382be1-cec1-4218-9c84-38c616bb9158",
+          "label": "Скидка 15% на АП (12 мес/ЦМ) (12TMDIS15)",
+          "value": "12TMDIS"
+        },
+        {
+          "id": "b4bd7f03-0b9b-461b-ad21-0858e6872203",
+          "label": "Скидка 20% на АП (12 мес/ЦМ) (12TMDIS20)",
+          "value": "12TMDIS"
+        },
+        {
+          "id": "cb5c1104-c3fa-40ad-9b15-f9cf4ba51fc0",
+          "label": "Скидка 30% на АП (12 мес/ЦМ) (12TMDIS30)",
+          "value": "12TMDIS"
+        },
+        {
+          "id": "d1450865-42a5-4001-b1cb-de49a14a8ff5",
+          "label": "Скидка 40% на АП (12 мес/ЦМ) (12TMDIS40)",
+          "value": "12TMDIS"
+        },
+        {
+          "id": "388f818b-91f6-4427-8532-fcfe613440f5",
+          "label": "Скидка 60% на АП (12 мес/ЦМ) (12TMDIS60)",
+          "value": "12TMDIS"
+        },
+        {
+          "id": "325c58e9-ec73-4f1c-aedd-899af945ce3d",
+          "label": "Скидка 60% на АП (1 мес/ЦМ) (1TMDIS60)",
+          "value": "1TMDIS"
+        },
+        {
+          "id": "7cbc6da4-a474-41fc-a586-7339648cbc98",
+          "label": "Скидка 70% на АП (1 мес/ЦМ) (1TMDIS70)",
+          "value": "1TMDIS"
+        },
+        {
+          "id": "169730c9-67e6-4ded-8ee4-151ce1bfe884",
+          "label": "Скидка 100% на АП (1 мес/ЦМ) (1TMDISC00)",
+          "value": "1TMDIS"
+        },
+        {
+          "id": "542f8b83-ede0-422b-a5eb-826f8fbdeb2b",
+          "label": "Скидка 5% на АП (1 мес/ЦМ) (1TMDISC05)",
+          "value": "1TMDISC"
+        },
+        {
+          "id": "edb63eb8-a22d-4dbe-9640-ee616e58fa5f",
+          "label": "Скидка 10% на АП (1 мес/ЦМ) (1TMDISC10)",
+          "value": "1TMDISC"
+        },
+        {
+          "id": "03d9f880-ffa7-4d9f-95f6-8e2871547a1c",
+          "label": "Скидка 15% на АП (1 мес/ЦМ) (1TMDISC15)",
+          "value": "1TMDISC"
+        },
+        {
+          "id": "d75ae2db-e966-4fbb-8fed-fb97bb045b67",
+          "label": "Скидка 20% на АП (1 мес/ЦМ) (1TMDISC20)",
+          "value": "1TMDISC"
+        },
+        {
+          "id": "4303b747-8a2a-4f60-8db2-7338db16254c",
+          "label": "Скидка 30% на АП (1 мес/ЦМ) (1TMDISC30)",
+          "value": "1TMDISC"
+        },
+        {
+          "id": "c8d69280-a034-4f23-b2cb-abbe556358c5",
+          "label": "Скидка 50% на АП (1 мес/ЦМ) (1TMDISC50)",
+          "value": "1TMDISC"
+        },
+        {
+          "id": "cc7cd839-a7e2-45ad-a95d-07d279e14a70",
+          "label": "Акция 2 недели в подарок (2TMDISC00)",
+          "value": "2TMDISC"
+        },
+        {
+          "id": "9a3852b8-6db5-4f36-b1f7-309f30c165f9",
+          "label": "Скидка 30% на АП (2 мес/ЦМ) (2TMDISC30)",
+          "value": "2TMDISC"
+        },
+        {
+          "id": "b1b447cb-48a6-4b2b-b823-a3206252d6fa",
+          "label": "Скидка 60% на АП (3 мес/ЦМ) (3TMDIS60)",
+          "value": "3TMDIS"
+        },
+        {
+          "id": "80fb6a9b-12ec-4fc7-bee3-1e83eeef5165",
+          "label": "Скидка 70% на АП (3 мес/ЦМ) (3TMDIS70)",
+          "value": "3TMDIS"
+        },
+        {
+          "id": "3cfa3057-a9e4-48ce-8bff-b82f42e8da38",
+          "label": "Скидка 5% на АП (3 мес/ЦМ) (3TMDISC05)",
+          "value": "3TMDISC"
+        },
+        {
+          "id": "7aa534c5-345e-4b92-aa89-b27c21187698",
+          "label": "Скидка 10% на АП (3 мес/ЦМ) (3TMDISC10)",
+          "value": "3TMDISC"
+        },
+        {
+          "id": "05ce4f89-4147-4915-a85d-20a686385f08",
+          "label": "Скидка 15% на АП (3 мес/ЦМ) (3TMDISC15)",
+          "value": "3TMDISC"
+        },
+        {
+          "id": "1f9ace8e-d282-4ca3-bd60-2c51c56ff18c",
+          "label": "Скидка 20% на АП (3 мес/ЦМ) (3TMDISC20)",
+          "value": "3TMDISC"
+        },
+        {
+          "id": "7d01fc7b-316c-4707-ab23-a0906b46eebf",
+          "label": "Скидка 30% на АП (3 мес/ЦМ) (3TMDISC30)",
+          "value": "3TMDISC"
+        },
+        {
+          "id": "e28bb11e-58b9-4ddd-8a03-8a4fff0fbaf8",
+          "label": "Скидка 50% на АП (3 мес/ЦМ) (3TMDISC50)",
+          "value": "3TMDISC"
+        },
+        {
+          "id": "c1da23ef-deab-4ea8-b211-3195ac345d60",
+          "label": "Скидка 60% на АП (6 мес/ЦМ) (6TMDIS60)",
+          "value": "6TMDIS"
+        },
+        {
+          "id": "533c8413-55d6-4204-a12e-34d4e57eee39",
+          "label": "Скидка 70% на АП (6 мес/ЦМ) (6TMDIS70)",
+          "value": "6TMDIS"
+        },
+        {
+          "id": "f86f8b12-1bef-4fbc-8f8f-72acb7a78659",
+          "label": "Скидка 5% на АП (6 мес/ЦМ) (6TMDISC05)",
+          "value": "6TMDISC"
+        },
+        {
+          "id": "ce67baf4-fe79-4c61-825d-2e32ada984ce",
+          "label": "Скидка 10% на АП (6мес/ЦМ) (6TMDISC10)",
+          "value": "6TMDISC"
+        },
+        {
+          "id": "094b73b2-937f-4619-8662-bc734eff0e11",
+          "label": "Скидка 15% на АП (6 мес/ЦМ) (6TMDISC15)",
+          "value": "6TMDISC"
+        },
+        {
+          "id": "a1fa83a1-4212-45a9-a3ef-01a7ee851d77",
+          "label": "Скидка 20% на АП (6 мес/ЦМ) (6TMDISC20)",
+          "value": "6TMDISC"
+        },
+        {
+          "id": "a5393256-3741-4f80-9be4-20613ebc90e1",
+          "label": "Скидка 30% на АП (6 мес/ЦМ) (6TMDISC30)",
+          "value": "6TMDISC"
+        },
+        {
+          "id": "86adc5c1-6476-4510-a45c-c2a7083b9e40",
+          "label": "Скидка 50% на АП (6 мес/ЦМ) (6TMDISC50)",
+          "value": "6TMDISC"
+        },
+        {
+          "id": "3e56076e-0d9a-4825-aabc-4cef6def633d",
+          "label": "(0/0)Акц.скид.50% Яндекс.Такси (DIS50YAND)",
+          "value": "DIS50YA"
+        },
+        {
+          "id": "2b5aa1cb-4e4d-4766-adef-afdacdc1cc13",
+          "label": "50% скидка на АП на 6 месяцев (DISC50_6)",
+          "value": "DISC50"
+        },
+        {
+          "id": "758c42ae-66e2-49f7-bb56-94d43eef319d",
+          "label": "Скидка 50% на АП 1 мес. (SALE_50)",
+          "value": "SALE_"
+        },
+        {
+          "id": "583dac6c-30c6-49f1-b19c-c7c37214ce8d",
+          "label": "Скидка 30% на абонентскую плату по вашему тарифу (TMDIS30)",
+          "value": "TMDIS"
+        },
+        {
+          "id": "ff6c6187-9746-4fce-a89d-f95569ee2306",
+          "label": "Скидка 40% на абонентскую плату по вашему тарифу (TMDIS40)",
+          "value": "TMDIS"
+        },
+        {
+          "id": "73ccc635-e1df-4757-9d5b-f55272c56ee6",
+          "label": "Скидка 60% на абонентскую плату по вашему тарифу (TMDIS60)",
+          "value": "TMDIS"
+        },
+        {
+          "id": "efb5c933-abef-4b72-af0b-476821747c4d",
+          "label": "Скидка 70% на абонентскую плату по вашему тарифу (TMDIS70)",
+          "value": "TMDIS"
+        },
+        {
+          "id": "362f37ce-01d5-4c19-baab-d2d6dd42afbf",
+          "label": "Скидка 80% на абонентскую плату по вашему тарифу (TMDIS80)",
+          "value": "TMDIS"
+        },
+        {
+          "id": "22f320b6-a2c4-4b25-a26e-ecbfdf51c08e",
+          "label": "Скидка 90% на абонентскую плату по вашему тарифу (TMDIS90)",
+          "value": "TMDIS"
+        },
+        {
+          "id": "7014212b-7e89-4002-a2f9-910dc35369fb",
+          "label": "50% скидка на АП (TMDISC50)",
+          "value": "TMDIS"
+        },
+        {
+          "id": "9217bc59-f56e-41d3-8d56-4b7556526ce8",
+          "label": "Скидка 70% на АП (12 мес/ЦМ) (TMDISC70)",
+          "value": "TMDIS"
+        },
+        {
+          "id": "c76fd117-dc43-4551-8d05-0595470bc21e",
+          "label": "Скидка 80% на АП (12 мес/ЦМ) (TMDISC80)",
+          "value": "TMDIS"
+        },
+        {
+          "id": "99bdd07d-afdd-4f79-b682-66c559940e39",
+          "label": "Скидка 90% на АП (12 мес/ЦМ) (TMDISC90)",
+          "value": "TMDI"
+        },
+        {
+          "id": "ca378076-4a22-4754-a375-0d69613c0384",
+          "label": "ЗАПРЕЩЕНО ДЛЯ MNP!!!!!!!! (TMDISC)",
+          "value": "TMDIS"
+        },
+        {
+          "id": "bd679298-d511-43ed-80a1-f11c6486e811",
+          "label": "Скидка на АП по тарифу 5%(ЦМ) (TM_DISC05)",
+          "value": "TM_DIS"
+        },
+        {
+          "id": "9e8820a8-cbe1-47b8-b1a5-2c5a3f4a3465",
+          "label": "Скидка на АП по тарифу 10%(ЦМ) (TM_DISC10)",
+          "value": "TM_DI"
+        },
+        {
+          "id": "3ca5093d-1ca4-47c3-a715-5676d44a103b",
+          "label": "Скидка на АП по тарифу 15%(ЦМ) (TM_DISC15)",
+          "value": "TM_DI"
+        },
+        {
+          "id": "2215f6fa-5f1b-48ac-9d2c-101e49e8e922",
+          "label": "Скидка на АП по тарифу 20%(ЦМ) (TM_DISC20)",
+          "value": "TM_DI"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Скидки",
+      "type": "select",
+      "urlEncode": true,
+      "value": "1TMDIS"
+    },
+    {
+      "flags": 0,
+      "id": "854c7884-ce4f-43df-b3a8-603cd32ad0f0",
+      "jsonEncode": false,
+      "key": "cookie",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "e5564a38-9572-4f2a-ba53-71462b052daa",
+      "jsonEncode": false,
+      "key": "options",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "text",
+      "urlEncode": true,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "f7dd5aaf-1f66-4027-9a2e-f0e974a64b2f",
+      "jsonEncode": false,
+      "key": "login",
+      "options": [],
+      "rememberValue": true,
+      "title": "Логин",
+      "type": "number",
+      "urlEncode": false,
+      "value": "9034384392"
+    },
+    {
+      "flags": 0,
+      "id": "3e1f667e-063b-4f44-bb75-2224107e0809",
+      "jsonEncode": false,
+      "key": "otp",
+      "options": [],
+      "rememberValue": false,
+      "title": "Одноразовый код",
+      "type": "password",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "b63330f9-c1e1-4a1d-aca2-d32640f5a486",
+      "jsonEncode": false,
+      "key": "useragent",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": "MLK Android Phone 3.3.14"
+    },
+    {
+      "flags": 0,
+      "id": "3dc8c6a1-75a2-4691-92e9-94cfaf56c08f",
+      "jsonEncode": false,
+      "key": "off",
+      "options": [],
+      "rememberValue": false,
+      "title": "D",
+      "type": "constant",
+      "urlEncode": false,
+      "value": "D"
+    },
+    {
+      "flags": 0,
+      "id": "8980394f-9376-4302-b11b-33bcf8400201",
+      "jsonEncode": false,
+      "key": "on",
+      "options": [],
+      "rememberValue": false,
+      "title": "A",
+      "type": "constant",
+      "urlEncode": false,
+      "value": "A"
+    },
+    {
+      "flags": 0,
+      "id": "39205697-96cb-4a6a-8562-fcf3c7ce96d7",
+      "jsonEncode": false,
+      "key": "offon",
+      "options": [
+        {
+          "id": "bdd22255-7254-40eb-b344-0225fb1f88fa",
+          "label": "Отключить услугу",
+          "value": "{{3dc8c6a1-75a2-4691-92e9-94cfaf56c08f}}"
+        },
+        {
+          "id": "920690e0-2ae5-4343-9baa-00780c9c3569",
+          "label": "Подключить услугу",
+          "value": "{{8980394f-9376-4302-b11b-33bcf8400201}}"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Что сделать ?",
+      "type": "select",
+      "urlEncode": false,
+      "value": "{{8980394f-9376-4302-b11b-33bcf8400201}}"
+    },
+    {
+      "flags": 0,
+      "id": "5a2ecf36-871f-45ca-b739-4e5848131b7a",
+      "jsonEncode": false,
+      "key": "param",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "text",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "358a8839-dabb-4c07-ba49-df8b62f55125",
+      "jsonEncode": false,
+      "key": "Loginmlk",
+      "options": [],
+      "rememberValue": true,
+      "title": "Введите логин",
+      "type": "number",
+      "urlEncode": false,
+      "value": "9289547515"
+    },
+    {
+      "flags": 0,
+      "id": "4c538173-f1ec-471e-a0f3-4186ee49a171",
+      "jsonEncode": false,
+      "key": "Passwordmlk",
+      "options": [],
+      "rememberValue": true,
+      "title": "Введите пароль",
+      "type": "password",
+      "urlEncode": false,
+      "value": "KsDima3k"
+    },
+    {
+      "flags": 0,
+      "id": "70872376-61ee-4d54-85a3-acbc75ee6770",
+      "jsonEncode": false,
+      "key": "key",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": "undefined"
+    },
+    {
+      "flags": 0,
+      "id": "ca5de284-adfb-4679-9712-9e45aad23a4e",
+      "jsonEncode": false,
+      "key": "id",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "text",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "d938d5ed-4844-430b-af2d-ee689d58b2b9",
+      "jsonEncode": false,
+      "key": "authsoap",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "60ea9584-0c26-4a84-84aa-13704a28fbe6",
+      "jsonEncode": false,
+      "key": "discount",
+      "options": [
+        {
+          "id": "b90c7e18-1a85-48ab-beae-d7470e7972fa",
+          "label": "Скидки на всегда",
+          "value": "{{dbfe47c5-cd43-4804-b01c-824587c6c617}}"
+        },
+        {
+          "id": "3390d6b6-8214-474b-be5f-71b7889166f4",
+          "label": "Скидки на определенный срок",
+          "value": "{{a02ebb93-8598-4018-8c85-155e93c2e279}}"
+        },
+        {
+          "id": "84fed704-38df-41e7-901d-6d181244cc2c",
+          "label": "Скидки с Абонентской платой",
+          "value": "{{e49438f8-eed0-4e06-a0f7-58adc192d3a3}}"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выбирите",
+      "type": "select",
+      "urlEncode": false,
+      "value": "{{e49438f8-eed0-4e06-a0f7-58adc192d3a3}}"
+    },
+    {
+      "flags": 0,
+      "id": "a02ebb93-8598-4018-8c85-155e93c2e279",
+      "jsonEncode": false,
+      "key": "discount1",
+      "options": [
+        {
+          "id": "05a55d69-78ab-4800-8afe-c70646d19a39",
+          "label": "Скидка 50% на 1 месяц (SALE_50)",
+          "value": "SALE_50"
+        },
+        {
+          "id": "66028dda-9cf2-48c6-9b7e-9ebb38e80632",
+          "label": "Скидка 50% на 6 месяцев (DISC50_6)",
+          "value": "DISC50_6"
+        },
+        {
+          "id": "718a83e6-12da-4186-8e9d-008529333dc9",
+          "label": "Скидка 40% на 12 месяцев (ORSCM_T_F)",
+          "value": "ORSCM_T_F"
+        },
+        {
+          "id": "095c7625-3d77-4bcd-a9b9-5a9d329480d4",
+          "label": "Скидка 60% на 12 месяцев (ORSCM_T_S)",
+          "value": "ORSCM_T_S"
+        },
+        {
+          "id": "02b10bd0-d451-4c3f-86da-089d053654ff",
+          "label": "Скидка 80% на 12 месяцев (ORSCM_T_E)",
+          "value": "ORSCM_T_B"
+        },
+        {
+          "id": "c52f9a95-32aa-4606-b0d6-d344d04a3eff",
+          "label": "Скидка 100% на 1 месяц (ORSCM_O_H)",
+          "value": "ORSCM_O_A"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Скидки на срок",
+      "type": "select",
+      "urlEncode": false,
+      "value": "ORSCM_O_A"
+    },
+    {
+      "flags": 0,
+      "id": "e49438f8-eed0-4e06-a0f7-58adc192d3a3",
+      "jsonEncode": false,
+      "key": "discount2",
+      "options": [
+        {
+          "id": "c0058128-8cac-42db-8c3e-2ae3e31c4e1b",
+          "label": "Скидка 100% на 1 месяц АП 1р в сутки (1VPLCD1)",
+          "value": "1VPLCD1"
+        },
+        {
+          "id": "9cc28c24-a27c-4a61-aa2b-944217368131",
+          "label": "Скидка 100% на 1 месяц АП 3р в сутки (1VPLCD3)",
+          "value": "1VPLCD3"
+        },
+        {
+          "id": "ab403444-0336-4124-84ff-80f68fcae669",
+          "label": "Скидка 100% на 3 месяца АП 1р в сутки (3VPLCD1)",
+          "value": "3VPLCD1"
+        },
+        {
+          "id": "6829efb0-ed7f-4c4c-8a6b-5b6400cf41dc",
+          "label": "Скидка 100% на 3 месяца АП 3 р в сутки (3VPLCD3)",
+          "value": "3VPLCD3"
+        },
+        {
+          "id": "08dc3cdd-123b-40cf-b90e-b5141dbaa0ae",
+          "label": "Скидка 100% на 6 месяцев АП 1р в сутки(6VPLCD1)",
+          "value": "6VPLCD1"
+        },
+        {
+          "id": "50d2fc94-a80f-443a-8856-e371e7988032",
+          "label": "Скидка 100% на 6 месяцев АП 3р в сутки (6VPLCD3)",
+          "value": "6VPLCD3"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Скидки с АП",
+      "type": "select",
+      "urlEncode": false,
+      "value": "6VPLCD1"
+    },
+    {
+      "flags": 0,
+      "id": "a999d828-1c81-4bea-bd80-228aafa1b2c3",
+      "jsonEncode": false,
+      "key": "DDiscount",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "fe6901e4-9c61-4bcd-b144-c6e6263ea8ac",
+      "jsonEncode": false,
+      "key": "marketkod",
+      "options": [],
+      "rememberValue": true,
+      "title": "Введите маркет код",
+      "type": "text",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "bb1959cc-2959-480a-819a-584456630446",
+      "jsonEncode": false,
+      "key": "ban",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": "707549897"
+    },
+    {
+      "flags": 0,
+      "id": "25b2435c-d343-476e-b4d2-517a3fa4d3d7",
+      "jsonEncode": false,
+      "key": "username",
+      "options": [],
+      "rememberValue": true,
+      "title": "Логин",
+      "type": "number",
+      "urlEncode": false,
+      "value": "9897086762"
+    },
+    {
+      "flags": 0,
+      "id": "c8191e1f-b017-4081-91fa-28553ef3c59c",
+      "jsonEncode": false,
+      "key": "password",
+      "options": [],
+      "rememberValue": true,
+      "title": "Пароль",
+      "type": "password",
+      "urlEncode": false,
+      "value": "KsDima3k"
+    },
+    {
+      "flags": 0,
+      "id": "e997ee68-99e6-4c2e-a46b-4cad1513bae1",
+      "jsonEncode": false,
+      "key": "token",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "439e6967-31d4-4db7-b58d-f314777e8fb8",
+      "jsonEncode": false,
+      "key": "services",
+      "options": [],
+      "rememberValue": false,
+      "title": "billingId",
+      "type": "number",
+      "urlEncode": true,
+      "value": "9924"
+    },
+    {
+      "flags": 0,
+      "id": "69728a8e-6446-4d87-bbfe-67e3aad32dad",
+      "jsonEncode": false,
+      "key": "number",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": true,
+      "value": "9897086762"
+    },
+    {
+      "flags": 0,
+      "id": "6a66c54c-b231-46d5-8f5e-8257ad687474",
+      "jsonEncode": false,
+      "key": "login",
+      "options": [],
+      "rememberValue": true,
+      "title": "Логин",
+      "type": "number",
+      "urlEncode": true,
+      "value": "9034384392"
+    },
+    {
+      "flags": 0,
+      "id": "b101be71-ba39-42b1-ae01-b4a1a8ba69ab",
+      "jsonEncode": false,
+      "key": "password",
+      "options": [],
+      "rememberValue": true,
+      "title": "Текущий пароль",
+      "type": "password",
+      "urlEncode": true,
+      "value": "KsDi3k56"
+    },
+    {
+      "flags": 0,
+      "id": "e95f8658-fc84-4298-9e05-9f794d1b599f",
+      "jsonEncode": false,
+      "key": "password3",
+      "options": [],
+      "rememberValue": true,
+      "title": "Пароль",
+      "type": "password",
+      "urlEncode": true,
+      "value": "A0308m1510"
+    },
+    {
+      "flags": 0,
+      "id": "169a248a-5d4c-4e49-b029-ed2c78c42246",
+      "jsonEncode": false,
+      "key": "token",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": "E26568F235740356B1BCE3E193896550"
+    },
+    {
+      "flags": 0,
+      "id": "91f8a669-efa3-4d4c-8b72-c818afcd4add",
+      "jsonEncode": false,
+      "key": "ctn",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": true,
+      "value": "9034384392"
+    },
+    {
+      "flags": 0,
+      "id": "fe99b79b-c7b8-4ac4-ba19-68e02c41d8e4",
+      "jsonEncode": false,
+      "key": "soc",
+      "options": [],
+      "rememberValue": false,
+      "title": "Сок",
+      "type": "text",
+      "urlEncode": true,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "0cf333dd-f0c5-4d4a-bb82-6eae8d50681e",
+      "jsonEncode": false,
+      "key": "market",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": true,
+      "value": "RND"
+    },
+    {
+      "flags": 0,
+      "id": "fae1e716-9b9d-4bc1-9f12-b0e6159265ba",
+      "jsonEncode": false,
+      "key": "discountlist",
+      "options": [
+        {
+          "id": "f30cd5a5-feba-449f-9e2d-cc7cd34985c7",
+          "label": "Скидка 5% на АП (12 мес/ЦМ) (12TMDIS05)",
+          "value": "12TMDIS05"
+        },
+        {
+          "id": "2b19d51a-1933-4b73-b350-521ea78ffe5d",
+          "label": "Скидка 10% на АП (12 мес/ЦМ) (12TMDIS10)",
+          "value": "12TMDIS10"
+        },
+        {
+          "id": "cfbe5c46-0317-4040-b37e-40faa1b557ff",
+          "label": "Скидка 15% на АП (12 мес/ЦМ) (12TMDIS15)",
+          "value": "12TMDIS15"
+        },
+        {
+          "id": "faf6cbf3-33df-4992-88bd-5fac18ae370c",
+          "label": "Скидка 20% на АП (12 мес/ЦМ) (12TMDIS20)",
+          "value": "12TMDIS20"
+        },
+        {
+          "id": "4423ef20-42fc-482e-87cf-2fa5c44a7d29",
+          "label": "Скидка 30% на АП (12 мес/ЦМ) (12TMDIS30)",
+          "value": "12TMDIS30"
+        },
+        {
+          "id": "a9089f38-fa27-46e8-b22b-417a131cba9e",
+          "label": "Скидка 40% на АП (12 мес/ЦМ) (12TMDIS40)",
+          "value": "12TMDIS40"
+        },
+        {
+          "id": "5e611c5a-b3c0-4a2c-a311-fb1d43ffd77e",
+          "label": "Скидка 60% на АП (12 мес/ЦМ) (12TMDIS60)",
+          "value": "12TMDIS60"
+        },
+        {
+          "id": "d34d5fac-d40f-4cc1-be22-52b4b63e0754",
+          "label": "Скидка 60% на АП (1 мес/ЦМ) (1TMDIS60)",
+          "value": "1TMDIS60"
+        },
+        {
+          "id": "bac50928-6884-40d3-a714-184c4997cae0",
+          "label": "Скидка 70% на АП (1 мес/ЦМ) (1TMDIS70)",
+          "value": "1TMDIS70"
+        },
+        {
+          "id": "6f07ed65-d1ea-44ba-84d4-d627b2077e53",
+          "label": "Скидка 100% на АП (1 мес/ЦМ) (1TMDISC00)",
+          "value": ""
+        },
+        {
+          "id": "10ba1066-8e92-489a-928d-250d7cb96671",
+          "label": "Скидка 5% на АП (1 мес/ЦМ) (1TMDISC05)",
+          "value": "1TMDISC05"
+        },
+        {
+          "id": "9289e83b-292c-4155-83cd-3e47c550c4ea",
+          "label": "Скидка 10% на АП (1 мес/ЦМ) (1TMDISC10)",
+          "value": "1TMDISC10"
+        },
+        {
+          "id": "25d2fd2a-dd86-42c2-965f-52bd48a1e4f5",
+          "label": "Скидка 15% на АП (1 мес/ЦМ) (1TMDISC15)",
+          "value": "1TMDISC15"
+        },
+        {
+          "id": "1b642801-af41-4b34-b721-8ded80aae8b2",
+          "label": "Скидка 20% на АП (1 мес/ЦМ) (1TMDISC20)",
+          "value": "1TMDISC20"
+        },
+        {
+          "id": "79e36205-6d44-4551-a1c1-88d3be9345ab",
+          "label": "Скидка 30% на АП (1 мес/ЦМ) (1TMDISC30)",
+          "value": "1TMDISC30"
+        },
+        {
+          "id": "aa9e2222-3205-4fe9-b27d-938835f0d9e9",
+          "label": "Скидка 50% на АП (1 мес/ЦМ) (1TMDISC50)",
+          "value": "1TMDISC50"
+        },
+        {
+          "id": "ee5699f1-402f-46ed-b9e9-ce26f4f41106",
+          "label": "Акция 2 недели в подарок (2TMDISC00)",
+          "value": "2TMDISC00"
+        },
+        {
+          "id": "b43f755d-6826-4914-b051-1915cda0d029",
+          "label": "Скидка 30% на АП (2 мес/ЦМ) (2TMDISC30)",
+          "value": "2TMDISC30"
+        },
+        {
+          "id": "e5cd952a-b76e-4587-a861-94f560ed4ddd",
+          "label": "Скидка 60% на АП (3 мес/ЦМ) (3TMDIS60)",
+          "value": "3TMDIS60"
+        },
+        {
+          "id": "53c0a1ae-e401-4c57-ba4b-6cc503d244a6",
+          "label": "Скидка 70% на АП (3 мес/ЦМ) (3TMDIS70)",
+          "value": ""
+        },
+        {
+          "id": "b0fae969-8232-4df5-8997-5cf1120cac0e",
+          "label": "Скидка 5% на АП (3 мес/ЦМ) (3TMDISC05)",
+          "value": "3TMDISC05"
+        },
+        {
+          "id": "9d0aede2-3bd9-436a-b80c-62f9e1c25e99",
+          "label": "Скидка 10% на АП (3 мес/ЦМ) (3TMDISC10)",
+          "value": "3TMDISC10"
+        },
+        {
+          "id": "5adb6b42-20b5-44c5-8ac0-4d7926ae68cf",
+          "label": "Скидка 15% на АП (3 мес/ЦМ) (3TMDISC15)",
+          "value": "3TMDISC15"
+        },
+        {
+          "id": "bb27f746-ebe4-4ecd-8d2a-05a0299e46ed",
+          "label": "Скидка 20% на АП (3 мес/ЦМ) (3TMDISC20)",
+          "value": "3TMDISC20"
+        },
+        {
+          "id": "f3438379-6a29-44e9-8a79-b3c6e178a8eb",
+          "label": "Скидка 30% на АП (3 мес/ЦМ) (3TMDISC30)",
+          "value": "3TMDISC30"
+        },
+        {
+          "id": "cf6f5981-a5ec-4615-a7bf-9e9f78e23b4e",
+          "label": "Скидка 50% на АП (3 мес/ЦМ) (3TMDISC50)",
+          "value": "3TMDISC50"
+        },
+        {
+          "id": "d7d425e9-0413-432f-94b3-482275bc605b",
+          "label": "Скидка 60% на АП (6 мес/ЦМ) (6TMDIS60)",
+          "value": "6TMDIS60"
+        },
+        {
+          "id": "8676886e-052f-46c7-9f5e-76d96b1dad01",
+          "label": "Скидка 70% на АП (6 мес/ЦМ) (6TMDIS70)",
+          "value": "6TMDIS"
+        },
+        {
+          "id": "192828e3-b59d-4a04-85d2-7a3e06942bbc",
+          "label": "Скидка 5% на АП (6 мес/ЦМ) (6TMDISC05)",
+          "value": "6TMDISC05"
+        },
+        {
+          "id": "be854a6d-f057-4dc6-961c-1c522db825cf",
+          "label": "Скидка 10% на АП (6мес/ЦМ) (6TMDISC10)",
+          "value": "6TMDISC10"
+        },
+        {
+          "id": "e242354d-ccf0-4dbc-a414-d2c8371efc2a",
+          "label": "Скидка 15% на АП (6 мес/ЦМ) (6TMDISC15)",
+          "value": "6TMDISC15"
+        },
+        {
+          "id": "373a5281-c254-4664-a061-a1de1dcf922d",
+          "label": "Скидка 20% на АП (6 мес/ЦМ) (6TMDISC20)",
+          "value": "6TMDISC20"
+        },
+        {
+          "id": "36b865b0-a72a-4512-89ab-ea4041fd111c",
+          "label": "Скидка 30% на АП (6 мес/ЦМ) (6TMDISC30)",
+          "value": "6TMDISC30"
+        },
+        {
+          "id": "b9883abf-b7df-4335-9940-219129f87c28",
+          "label": "Скидка 50% на АП (6 мес/ЦМ) (6TMDISC50)",
+          "value": "6TMDISC50"
+        },
+        {
+          "id": "4bbc03f2-1b47-4bed-9e99-9f466c631284",
+          "label": "(0/0)Акц.скид.50% Яндекс.Такси (DIS50YAND)",
+          "value": "DIS50YAND"
+        },
+        {
+          "id": "80399c54-60f1-4d2d-8ea1-dda04771a102",
+          "label": "50% скидка на АП на 6 месяцев (DISC50_6)",
+          "value": "DISC50_6"
+        },
+        {
+          "id": "a89cf0c7-d6cd-4621-87b4-ae4ab2d65066",
+          "label": "Скидка 50% на АП 1 мес. (SALE_50)",
+          "value": "SALE_50"
+        },
+        {
+          "id": "9149180e-8daf-4c5e-a530-70d3b1e62f9d",
+          "label": "Скидка 30% на абонентскую плату по вашему тарифу (TMDIS30)",
+          "value": "TMDIS30"
+        },
+        {
+          "id": "0becb173-e125-4160-9430-1ce93d940f2e",
+          "label": "Скидка 40% на абонентскую плату по вашему тарифу (TMDIS40)",
+          "value": "TMDIS40"
+        },
+        {
+          "id": "8e61a34e-8f67-4ca2-b1e1-434a273c7ad7",
+          "label": "Скидка 60% на абонентскую плату по вашему тарифу (TMDIS60)",
+          "value": "TMDIS60"
+        },
+        {
+          "id": "0ca01045-1ed5-48dc-983d-fbf9f4bd7283",
+          "label": "Скидка 70% на абонентскую плату по вашему тарифу (TMDIS70)",
+          "value": ""
+        },
+        {
+          "id": "eab30b92-8975-43ae-983b-7950a51ffdf0",
+          "label": "Скидка 80% на абонентскую плату по вашему тарифу (TMDIS80)",
+          "value": ""
+        },
+        {
+          "id": "0665eee0-5693-435e-a042-52c361892d19",
+          "label": "Скидка 90% на абонентскую плату по вашему тарифу (TMDIS90)",
+          "value": ""
+        },
+        {
+          "id": "bf38cff8-0817-47b7-a1fc-e3ac1343f118",
+          "label": "50% скидка на АП (TMDISC50)",
+          "value": "TMDISC50"
+        },
+        {
+          "id": "b7217295-88a1-41ca-a60d-53a1cab3cc14",
+          "label": "Скидка 70% на АП (12 мес/ЦМ) (TMDISC70)",
+          "value": ""
+        },
+        {
+          "id": "9be4f33a-809c-4d79-b312-ee9ab25407ba",
+          "label": "Скидка 80% на АП (12 мес/ЦМ) (TMDISC80)",
+          "value": ""
+        },
+        {
+          "id": "3129cb5e-5bfe-435e-86bc-69d49e5853a2",
+          "label": "Скидка 90% на АП (12 мес/ЦМ) (TMDISC90)",
+          "value": ""
+        },
+        {
+          "id": "d6e244e6-d9a8-4056-9d06-108d73db2b16",
+          "label": "ЗАПРЕЩЕНО ДЛЯ MNP!!!!!!!! (TMDISC)",
+          "value": "TMDISC"
+        },
+        {
+          "id": "9fe2a211-2f59-4723-9d98-00ec385783f7",
+          "label": "Скидка на АП по тарифу 5%(ЦМ) (TM_DISC05)",
+          "value": "TM_DISC05"
+        },
+        {
+          "id": "d8bcf510-75a6-43dd-84d3-e0b5a99c34ee",
+          "label": "Скидка на АП по тарифу 10%(ЦМ) (TM_DISC10)",
+          "value": "TM_DISC10"
+        },
+        {
+          "id": "7e381c7b-fbea-419e-8ce1-2fcfdf8cc5c4",
+          "label": "Скидка на АП по тарифу 15%(ЦМ) (TM_DISC15)",
+          "value": "TM_DISC15"
+        },
+        {
+          "id": "de0f702d-965b-45da-a83f-ebb20944654a",
+          "label": "Скидка на АП по тарифу 20%(ЦМ) (TM_DISC20)",
+          "value": "TM_DISC20"
+        },
+        {
+          "id": "e7dc415c-5309-4524-bd82-e5d996a5f520",
+          "label": "100% на месяц",
+          "value": "ORSCM_O_H"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Скидки",
+      "type": "select",
+      "urlEncode": true,
+      "value": "ORSCM_O_H"
+    },
+    {
+      "flags": 0,
+      "id": "e7a22027-1195-49a0-b4a7-2f45413fde9b",
+      "jsonEncode": false,
+      "key": "priceplansel",
+      "options": [
+        {
+          "id": "ae6a5db5-227b-4191-b8aa-c372eff1212b",
+          "label": "Без скидки",
+          "value": ""
+        },
+        {
+          "id": "49695075-ca99-4979-9e71-5906fcf63b80",
+          "label": "Со скидкой",
+          "value": "\u0026discountName\u003d{{fae1e716-9b9d-4bc1-9f12-b0e6159265ba}}\u0026campId\u003d647599\u0026subgroupId\u003d771218\u0026channelType\u003d5"
+        }
+      ],
+      "rememberValue": false,
+      "title": "",
+      "type": "select",
+      "urlEncode": false,
+      "value": "\u0026discountName\u003d{{fae1e716-9b9d-4bc1-9f12-b0e6159265ba}}\u0026campId\u003d647599\u0026subgroupId\u003d771218\u0026channelType\u003d5"
+    },
+    {
+      "flags": 0,
+      "id": "d2d5853f-e210-4eff-9a71-597c57bb849a",
+      "jsonEncode": false,
+      "key": "socsel",
+      "options": [
+        {
+          "id": "5c73d237-1783-44c3-a0f8-2c1660fa88a5",
+          "label": "Сок",
+          "value": "{{fe99b79b-c7b8-4ac4-ba19-68e02c41d8e4}}"
+        },
+        {
+          "id": "96c9a339-1a01-4a73-be62-829c7392d8ac",
+          "label": "Скидки",
+          "value": "{{fae1e716-9b9d-4bc1-9f12-b0e6159265ba}}"
+        }
+      ],
+      "rememberValue": false,
+      "title": "",
+      "type": "select",
+      "urlEncode": false,
+      "value": "{{fae1e716-9b9d-4bc1-9f12-b0e6159265ba}}"
+    },
+    {
+      "data": "{\"slider\":{\"max\":\"100\",\"min\":\"0\",\"step\":\"1\"}}",
+      "flags": 0,
+      "id": "2ee3362c-2221-41c9-80e5-54eeec584968",
+      "jsonEncode": false,
+      "key": "DSCAP",
+      "options": [],
+      "rememberValue": false,
+      "title": "Размер скидки в %",
+      "type": "slider",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "3f7cf2c0-7116-4118-a079-e464bd8b0aca",
+      "jsonEncode": false,
+      "key": "login",
+      "options": [],
+      "rememberValue": true,
+      "title": "Логин",
+      "type": "number",
+      "urlEncode": false,
+      "value": "99999999999"
+    },
+    {
+      "flags": 0,
+      "id": "c4b55c71-a85a-4f1b-9767-0bc73aab8609",
+      "jsonEncode": false,
+      "key": "login2",
+      "options": [],
+      "rememberValue": true,
+      "title": "Логин",
+      "type": "number",
+      "urlEncode": false,
+      "value": "9999999999"
+    },
+    {
+      "flags": 0,
+      "id": "5f357e5d-331b-425f-9c26-eccc08b3cc31",
+      "jsonEncode": false,
+      "key": "ctn",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": "99999999999"
+    },
+    {
+      "flags": 0,
+      "id": "e6e92f6a-24bf-4e88-82b4-ec14f797c667",
+      "jsonEncode": false,
+      "key": "ctn2",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": "9999999999"
+    },
+    {
+      "flags": 0,
+      "id": "216c396a-ddaf-49f7-a8e7-9e9d82dbabd7",
+      "jsonEncode": false,
+      "key": "password",
+      "options": [],
+      "rememberValue": true,
+      "title": "Пароль",
+      "type": "password",
+      "urlEncode": false,
+      "value": "Ks"
+    },
+    {
+      "flags": 0,
+      "id": "95629849-d4b4-4782-9746-35a7682c92ca",
+      "jsonEncode": false,
+      "key": "password2",
+      "options": [],
+      "rememberValue": true,
+      "title": "Пароль",
+      "type": "password",
+      "urlEncode": false,
+      "value": "Ks"
+    },
+    {
+      "flags": 0,
+      "id": "9818c9c2-7ce7-44fc-8b87-4acad404cd39",
+      "jsonEncode": false,
+      "key": "token",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": "E26568F235740356B1BCE3E193896550"
+    },
+    {
+      "flags": 0,
+      "id": "dbde882d-5c87-4980-a9e3-1066123579e1",
+      "jsonEncode": false,
+      "key": "token2",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "constant",
+      "urlEncode": false,
+      "value": "88D945E60DA98D68BE2F73CBDD669D97"
+    },
+    {
+      "flags": 0,
+      "id": "dbfe47c5-cd43-4804-b01c-824587c6c617",
+      "jsonEncode": false,
+      "key": "skidki",
+      "options": [
+        {
+          "id": "b6e9a8b5-692f-4578-874c-9b69741d749e",
+          "label": "Скидка 50% на 1 месяц",
+          "value": "SALE_50"
+        },
+        {
+          "id": "26f757e0-0422-499a-bac6-9cfc7ca53aee",
+          "label": "Скидка 50% бессрочно",
+          "value": "DIS50YAND"
+        },
+        {
+          "id": "650b7414-2564-477b-b21b-19e64e2ebd76",
+          "label": "Скидка 60% 12 месяцев",
+          "value": "ORSCM_T_S"
+        },
+        {
+          "id": "cb0fe801-6022-4cfa-a35c-3bf2aae7598d",
+          "label": "Скидка 80% 12 месяцев",
+          "value": "ORSCM_T_E"
+        },
+        {
+          "id": "f5848093-bc93-401c-ab2b-919f74db7299",
+          "label": "Скидка 100% на 7 дней",
+          "value": "7TMDISC00"
+        },
+        {
+          "id": "b22f44de-d63a-4439-97f0-ad43c79a78a4",
+          "label": "Скидка 100% на 2 недели",
+          "value": "2TMDISC00"
+        },
+        {
+          "id": "04827328-9bb4-439f-883f-d257688fffa3",
+          "label": "Скидка 100% на 1 месяц",
+          "value": "ORSCM_O_H"
+        },
+        {
+          "id": "962783f3-6e90-40aa-8489-ee02404d6092",
+          "label": "Скидка 90% на год",
+          "value": "TMDISC90"
+        },
+        {
+          "id": "53c97d15-35cf-4e8f-81c2-7607eb45d2d1",
+          "label": "Скидка 90% бессрочно",
+          "value": "TMDIS90"
+        },
+        {
+          "id": "6ea2f4bb-9dfb-4b49-9070-aa5f3d3e9666",
+          "label": "100% на 6 месяцев (1 руб/день)",
+          "value": "6VPLCD1"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Скидки",
+      "type": "select",
+      "urlEncode": false,
+      "value": "ORSCM_O_H"
+    },
+    {
+      "flags": 0,
+      "id": "c22bdd64-7427-4601-b7ba-fa4e568f47ff",
+      "jsonEncode": false,
+      "key": "internetsoc",
+      "options": [
+        {
+          "id": "865391fc-cc31-4b61-b7ae-139ba4505841",
+          "label": "Безлимитный интернет ",
+          "value": "GBDIT"
+        },
+        {
+          "id": "a9a98d91-1b8e-4e02-ab29-1e6c77dc7aad",
+          "label": "Безлимитный интернет (Новый)",
+          "value": "UNL_CVM0"
+        },
+        {
+          "id": "64abeb30-da67-4fa1-adf2-9bb83a689414",
+          "label": "Безлимитный интернет (BETA)",
+          "value": "UNL_F2020"
+        },
+        {
+          "id": "15a22214-97d1-4724-9ea1-5132701bc56f",
+          "label": "Безлимитный интернет в подарок ",
+          "value": "UNL_PRES"
+        },
+        {
+          "id": "665624c4-17da-47a9-8ce5-dd6e9b6fdb97",
+          "label": "Безлимитный интернет 3 месяца",
+          "value": "UNLINT_20"
+        },
+        {
+          "id": "b18abe31-427a-4ceb-9560-a855161fa1c4",
+          "label": "Безлимитный интернет за 1.69 в сутки",
+          "value": "UNL_CVM1"
+        },
+        {
+          "id": "7b924737-a3d3-4225-9320-0d2fe50df529",
+          "label": "Безлимитный интернет 3р. ",
+          "value": "UNL_CVM"
+        },
+        {
+          "id": "92be8ba3-ce8f-4518-863e-c92d67404feb",
+          "label": "Безлимит в 4G 60 дней",
+          "value": "UPASO4G"
+        },
+        {
+          "id": "7dcd33dd-a029-45b0-8266-d2d1ec7c8001",
+          "label": "Раздача WI-FI 7 дней промо",
+          "value": "TMTETR2PR"
+        },
+        {
+          "id": "d75c5c5a-fe0a-4d7c-a369-800a86c77734",
+          "label": "Раздача интернета 3 месяца",
+          "value": "TETR_3M"
+        },
+        {
+          "id": "338543a3-d5aa-415d-b5ae-64e3a96c58f1",
+          "label": "Запрет подключения опции Автопродления скорости",
+          "value": "AUTOSP_BL"
+        },
+        {
+          "id": "24706649-b782-46a6-bd70-51ef2a08650a",
+          "label": "Сервисы Контент-провайдеров",
+          "value": "CPA_SAS"
+        },
+        {
+          "id": "8af40b94-a62c-464a-a9f2-ea7096e23190",
+          "label": "20гб ",
+          "value": "BONUS20GB"
+        },
+        {
+          "id": "ee1a8025-371d-4d2d-9870-4f1cf28a12ad",
+          "label": "Безлимитные соц.сети, музыка и видео 6 месяцев ",
+          "value": "SNAUVD182"
+        },
+        {
+          "id": "f235bab9-d41a-4ce9-ad9b-eb29215e1d05",
+          "label": "Безлимитные мессенджеры",
+          "value": "MESSAGE_0"
+        },
+        {
+          "id": "eead85da-dbe6-44f2-9899-5724089baa19",
+          "label": "Безлимитные мессенджеры 6 месяцев ",
+          "value": "MESAGE182"
+        },
+        {
+          "id": "48977e29-384d-44ec-9aa3-90803000a076",
+          "label": "Безлимитная музыка",
+          "value": "AUDIO_0"
+        },
+        {
+          "id": "65085f94-a378-48c4-a8e8-0af3190a4fc5",
+          "label": "Безлимитное видео ",
+          "value": "VIDEO_0"
+        },
+        {
+          "id": "1d34e5e9-1514-4792-95de-6a0fad1989be",
+          "label": "Безлимитные карты",
+          "value": "NAVIG_0"
+        },
+        {
+          "id": "634d8725-64a3-43bd-8152-1a10c1dd005f",
+          "label": "Безлимитные соц.сети",
+          "value": "SOCSET_0"
+        },
+        {
+          "id": "d186fc2d-2f35-43dd-a6b8-4e433b0cc286",
+          "label": "Безлимитные соц сети и мессенджеры",
+          "value": "SOCMESSAG"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Интернет",
+      "type": "select",
+      "urlEncode": false,
+      "value": "GBDIT"
+    },
+    {
+      "flags": 0,
+      "id": "93a86de8-3802-4b04-97d5-474fa06a7c3c",
+      "jsonEncode": false,
+      "key": "smscall",
+      "options": [
+        {
+          "id": "58c021f2-494c-41fd-a649-926cd3d989c6",
+          "label": "Безлимитные звонки на номера Билайн ",
+          "value": "GBDBRF"
+        },
+        {
+          "id": "5325ba22-1b0c-4727-9e71-452dd0cf92a8",
+          "label": "Безлимитные звонки на номера Билайн 2 ",
+          "value": "BEEUNLRF3"
+        },
+        {
+          "id": "d8997604-d7f4-4a7a-aa08-4632a3072612",
+          "label": "Безлимитные звонки на номера Билайн 1.50 в день ",
+          "value": "BEEUNLRF1"
+        },
+        {
+          "id": "e655c3c1-0245-4365-b53c-92558adcdedc",
+          "label": "1500 минут на 24 часа ",
+          "value": "TMFREEDAY"
+        },
+        {
+          "id": "ecab6d11-cc48-4554-aa75-bfc3c97fac0f",
+          "label": "100 минут на междугородные номера других операторов и бесплатные входящие звонки по всей России (CVMMGVSR)",
+          "value": "CVMMGVSR"
+        },
+        {
+          "id": "b653eb06-5238-4d30-a107-cee8979eb904",
+          "label": "Звонки по России",
+          "value": "UNMG_0"
+        },
+        {
+          "id": "20fef739-3bcf-48d1-9151-7bd32ad1ed1e",
+          "label": "50 sms",
+          "value": "TM_50_SMS"
+        },
+        {
+          "id": "bc96548c-ad02-4010-ade8-7066f7ec9907",
+          "label": "300 sms",
+          "value": "SMS_0"
+        },
+        {
+          "id": "7c9f83a7-aa8a-4e97-b9ad-7e346685e89e",
+          "label": "Безлимитные sms",
+          "value": "UNLSMS20"
+        },
+        {
+          "id": "d11d26ad-61ba-41e0-85b1-0aefc10ce9c8",
+          "label": "Переадресация вызовов на специальных условиях (TM_CFRWD)",
+          "value": "TM_CFRWD"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Смс и Связь",
+      "type": "select",
+      "urlEncode": false,
+      "value": "TM_50_SMS"
+    },
+    {
+      "flags": 0,
+      "id": "d7eaa799-814d-4e6a-ad89-19a54844acaf",
+      "jsonEncode": false,
+      "key": "onther",
+      "options": [
+        {
+          "id": "c15a8c35-cd34-422f-8c55-d81f7959b523",
+          "label": "Премиум-статус ",
+          "value": "PREMST"
+        },
+        {
+          "id": "88b97acf-b5be-4469-982e-22a0c34c9fff",
+          "label": "Маркер CVM MNP",
+          "value": "TM_MNP_RT"
+        },
+        {
+          "id": "8278f734-d8bf-49fb-97a3-ab886fe5f427",
+          "label": "Любимый номер",
+          "value": "LN20"
+        },
+        {
+          "id": "0cda0577-e757-42fc-a33e-8614339be5ad",
+          "label": "Любимый номер 2",
+          "value": "LN20SEB"
+        },
+        {
+          "id": "0f1d76ae-c807-4dd7-9317-275f090dbb09",
+          "label": "Билайн секретарь ",
+          "value": "BEESECRT1"
+        },
+        {
+          "id": "3be29bd9-4dd9-4880-b290-7a2e9e609532",
+          "label": "Пополни позже (30 рублей)",
+          "value": "MSKTPINF2"
+        },
+        {
+          "id": "cc766f3d-9e63-45d3-9b9a-c675ae33aae5",
+          "label": "Будь вкурсе +",
+          "value": "MCCCFD"
+        },
+        {
+          "id": "4e05e04b-077a-4b11-b4d0-f10ada50a6c0",
+          "label": "Определитель номера",
+          "value": "PCLIPCLR"
+        }
+      ],
+      "rememberValue": false,
+      "title": "",
+      "type": "select",
+      "urlEncode": false,
+      "value": "PCLIPCLR"
+    },
+    {
+      "flags": 0,
+      "id": "9e9c9e30-422f-4fa4-8711-439c15a17d70",
+      "jsonEncode": false,
+      "key": "soc",
+      "options": [],
+      "rememberValue": false,
+      "title": "soc",
+      "type": "text",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "aeaaafda-fa1e-40c5-8215-d42c9e1dfd63",
+      "jsonEncode": false,
+      "key": "priceplansel",
+      "options": [
+        {
+          "id": "c6b15403-4916-4918-9e0d-d99e69ef5fb6",
+          "label": "Без скидки",
+          "value": ""
+        },
+        {
+          "id": "0b5e71b0-fe1e-4bac-ade4-eab09fb2956d",
+          "label": "Со скидкой",
+          "value": "\u0026discountName\u003d{{dbfe47c5-cd43-4804-b01c-824587c6c617}}\u0026campId\u003d647599\u0026subgroupId\u003d771218\u0026channelType\u003d5"
+        }
+      ],
+      "rememberValue": false,
+      "title": "",
+      "type": "select",
+      "urlEncode": false,
+      "value": "\u0026discountName\u003d{{dbfe47c5-cd43-4804-b01c-824587c6c617}}\u0026campId\u003d647599\u0026subgroupId\u003d771218\u0026channelType\u003d5"
+    },
+    {
+      "flags": 0,
+      "id": "254e0854-00b0-491b-886e-cddb2efc64b4",
+      "jsonEncode": false,
+      "key": "effexp",
+      "options": [
+        {
+          "id": "69b10036-7dbf-410b-91e4-24873b5de165",
+          "label": "Дата подключения (effDate)",
+          "value": "effDate"
+        },
+        {
+          "id": "b61875fd-80bb-42a5-897f-b02fd9b4ba5b",
+          "label": "Дата отключения (expDate)",
+          "value": "expDate"
+        }
+      ],
+      "rememberValue": false,
+      "title": "",
+      "type": "select",
+      "urlEncode": false,
+      "value": "effDate"
+    },
+    {
+      "data": "{\"date\":{\"format\":\"yyyy-MM-dd\"}}",
+      "flags": 0,
+      "id": "9c1de73e-2202-45f2-ae74-348ba965db72",
+      "jsonEncode": false,
+      "key": "date",
+      "options": [],
+      "rememberValue": false,
+      "title": "",
+      "type": "date",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "8887be09-adef-4478-9d7d-e6816ec7d9b2",
+      "jsonEncode": false,
+      "key": "soclist",
+      "options": [
+        {
+          "id": "a9622d0a-069c-4500-b469-6f6a8706354c",
+          "label": "Интернет",
+          "value": "{{c22bdd64-7427-4601-b7ba-fa4e568f47ff}}"
+        },
+        {
+          "id": "3d1f2ed7-9c75-44ff-880f-bc5300a051a4",
+          "label": "Звонки и СМС",
+          "value": "{{93a86de8-3802-4b04-97d5-474fa06a7c3c}}"
+        },
+        {
+          "id": "ce67c441-313f-437a-b11c-de184c29c1f8",
+          "label": "Скидки",
+          "value": "{{dbfe47c5-cd43-4804-b01c-824587c6c617}}"
+        },
+        {
+          "id": "baa110e5-85d5-40ed-86ed-370ac415bc01",
+          "label": "Дополнительно",
+          "value": "{{d7eaa799-814d-4e6a-ad89-19a54844acaf}}"
+        },
+        {
+          "id": "4ade967e-45b8-48db-bfc5-6018da9e5f11",
+          "label": "Не проверенные",
+          "value": "{{e2438a2b-75b3-4ea8-b188-925f0562e7a9}}"
+        },
+        {
+          "id": "ab2aad3a-415b-43b5-9c2b-12f311b8dbeb",
+          "label": "Подключить услугу по \"SOC\"",
+          "value": "{{9e9c9e30-422f-4fa4-8711-439c15a17d70}}"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите категорию",
+      "type": "select",
+      "urlEncode": false,
+      "value": "{{c22bdd64-7427-4601-b7ba-fa4e568f47ff}}"
+    },
+    {
+      "flags": 0,
+      "id": "f574157f-7d33-491a-a042-c53d72b04804",
+      "jsonEncode": false,
+      "key": "soclistproverka",
+      "options": [
+        {
+          "id": "33dd7c2a-fa24-472a-84f5-39c81682fc8a",
+          "label": "Интернет",
+          "value": "{{c22bdd64-7427-4601-b7ba-fa4e568f47ff}}"
+        },
+        {
+          "id": "79494c9e-89d1-4c0a-afaf-67bde06a9796",
+          "label": "Звонки и СМС",
+          "value": "{{93a86de8-3802-4b04-97d5-474fa06a7c3c}}"
+        },
+        {
+          "id": "10bd56a8-229f-4220-8242-362b0b68cee4",
+          "label": "Скидки",
+          "value": "{{dbfe47c5-cd43-4804-b01c-824587c6c617}}"
+        },
+        {
+          "id": "0011e819-62a3-4afb-9eee-5d91789de962",
+          "label": "Дополнительно",
+          "value": "{{d7eaa799-814d-4e6a-ad89-19a54844acaf}}"
+        },
+        {
+          "id": "5403116b-c5df-435d-b93a-a4b0216e350e",
+          "label": "Проверка услуги по \"SOC\"",
+          "value": "{{9e9c9e30-422f-4fa4-8711-439c15a17d70}}"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите категорию",
+      "type": "select",
+      "urlEncode": false,
+      "value": "{{c22bdd64-7427-4601-b7ba-fa4e568f47ff}}"
+    },
+    {
+      "flags": 0,
+      "id": "d633f6f2-7f38-4ce1-b3b9-7cbbdfe25986",
+      "jsonEncode": false,
+      "key": "soclistparameters",
+      "options": [
+        {
+          "id": "2d2833bd-b43f-4496-9a6c-3e5e868aed71",
+          "label": "Интернет",
+          "value": "{{c22bdd64-7427-4601-b7ba-fa4e568f47ff}}"
+        },
+        {
+          "id": "83875869-c6fc-47e5-8887-0be91615ca18",
+          "label": "Звонки и СМС",
+          "value": "{{93a86de8-3802-4b04-97d5-474fa06a7c3c}}"
+        },
+        {
+          "id": "20213352-21a8-47a7-b6e0-0a2eb8fb338c",
+          "label": "Скидки",
+          "value": "{{dbfe47c5-cd43-4804-b01c-824587c6c617}}"
+        },
+        {
+          "id": "07d5c810-e686-4fc9-8142-0d50053f3436",
+          "label": "Дополнительно",
+          "value": "{{d7eaa799-814d-4e6a-ad89-19a54844acaf}}"
+        },
+        {
+          "id": "0aaaa83c-ccd6-4aea-a5f0-a8fbfa7ba9bf",
+          "label": "Параметры услуг по \"SOC\"",
+          "value": "{{9e9c9e30-422f-4fa4-8711-439c15a17d70}}"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите категорию",
+      "type": "select",
+      "urlEncode": false,
+      "value": "{{dbfe47c5-cd43-4804-b01c-824587c6c617}}"
+    },
+    {
+      "flags": 0,
+      "id": "68d5d162-0322-4a4c-a14a-4097bdb409dc",
+      "jsonEncode": false,
+      "key": "soclistdeactiv",
+      "options": [
+        {
+          "id": "9a0870fd-8f04-433f-b3c4-551f81aa358f",
+          "label": "Отключить услугу по \"SOC\"",
+          "value": "{{9e9c9e30-422f-4fa4-8711-439c15a17d70}}"
+        },
+        {
+          "id": "30b00c3c-ce8c-4fd4-82e2-1b2776b874be",
+          "label": "Интернет",
+          "value": "{{c22bdd64-7427-4601-b7ba-fa4e568f47ff}}"
+        },
+        {
+          "id": "0df0430a-71f5-4e4a-a32b-87af65b11e1c",
+          "label": "Звонки и СМС",
+          "value": "{{93a86de8-3802-4b04-97d5-474fa06a7c3c}}"
+        },
+        {
+          "id": "dc78e06b-656c-4a03-94f1-e3a0503f1f9e",
+          "label": "Дополнительно",
+          "value": "{{d7eaa799-814d-4e6a-ad89-19a54844acaf}}"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите категорию",
+      "type": "select",
+      "urlEncode": false,
+      "value": "{{c22bdd64-7427-4601-b7ba-fa4e568f47ff}}"
+    },
+    {
+      "flags": 0,
+      "id": "d9140f16-4697-4db0-91fb-bc39e1c7764d",
+      "jsonEncode": false,
+      "key": "tarifsoc",
+      "options": [
+        {
+          "id": "95d1a36e-0877-4537-a124-94f266ffe64e",
+          "label": "Сок",
+          "value": "{{9e9c9e30-422f-4fa4-8711-439c15a17d70}}"
+        },
+        {
+          "id": "9a13bd51-109a-420c-a011-53cf4501578a",
+          "label": "Тарифы",
+          "value": "{{cd68337c-a249-497c-9362-38914124361b}}"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите категорию",
+      "type": "select",
+      "urlEncode": false,
+      "value": "{{cd68337c-a249-497c-9362-38914124361b}}"
+    },
+    {
+      "flags": 0,
+      "id": "cd68337c-a249-497c-9362-38914124361b",
+      "jsonEncode": false,
+      "key": "tariflist",
+      "options": [
+        {
+          "id": "d6289b57-b919-4943-aaf2-acdadb25ec75",
+          "label": "Поговорим",
+          "value": "{{a5a38c9f-395c-406c-9e43-8d48fba73fab}}"
+        },
+        {
+          "id": "5e165266-9158-4d04-9d1e-186943d82e9d",
+          "label": "Все за 90",
+          "value": "{{e8e874c9-9834-4ab9-86b9-e4f731eb6a3c}}"
+        },
+        {
+          "id": "f8ce2be8-e04d-4d91-89f2-8b4c025a0d85",
+          "label": "Все только для своих",
+          "value": "{{c767bc2b-7949-427a-a562-a5f6511126c1}}"
+        },
+        {
+          "id": "b631c90a-d6c6-43e6-b026-70b95c380e1a",
+          "label": "Все только для своих 2Х",
+          "value": "{{31068a82-beac-4dc7-bad4-85959b1ff0da}}"
+        },
+        {
+          "id": "42938cd3-18f0-4b57-b807-07065c932c81",
+          "label": "Все только для своих 3Х",
+          "value": "{{255b6629-cd46-4e71-ab91-596211ed3411}}"
+        },
+        {
+          "id": "59b80be9-4db2-40e7-9e0b-a31b40f5510f",
+          "label": "Би +",
+          "value": "{{01c701a9-e348-433d-8685-67cb46139e4e}}"
+        },
+        {
+          "id": "9ec197c4-be7f-44ed-8a67-0dc8b0d5a260",
+          "label": "Секунда",
+          "value": "{{441ddc16-751a-4c0a-9bd1-654812c7de2b}}"
+        },
+        {
+          "id": "f8d194de-4a66-4c8d-a4b3-d8d4c4c00d06",
+          "label": "Семья",
+          "value": "{{2c6fb305-b63d-440f-8dd5-1fb082250e32}}"
+        },
+        {
+          "id": "ba865e27-fd0e-47a4-bffc-5e7e4018ba4b",
+          "label": "Семья +",
+          "value": "{{9dea63f9-e683-4af2-bc82-3d1d32c95e3d}}"
+        },
+        {
+          "id": "e4fd8be6-0809-4c28-bb79-10f45ba3ddbe",
+          "label": "Супер семья",
+          "value": "{{a2bcbd63-0922-4c5c-84ae-1baf4ac08b44}}"
+        },
+        {
+          "id": "936ef978-bdbb-4fd7-83c8-359ebbc7557e",
+          "label": "Супер семья +",
+          "value": "{{7c9adb94-310b-40ea-8ca7-2b98db138700}}"
+        },
+        {
+          "id": "e788f472-f5e9-4c2a-a236-d8d3343ccce4",
+          "label": "Все для семьи",
+          "value": "{{9b5c2c5f-c13e-49c5-a1cd-6ec93a431117}}"
+        },
+        {
+          "id": "fbf8e0d6-2f5d-4868-aa11-3151000b190e",
+          "label": "Семья Акция ",
+          "value": "{{63dbebf8-7b67-4d17-beb2-145c16860091}}"
+        },
+        {
+          "id": "ba0937c1-8ed7-4549-905d-edad87e22dc2",
+          "label": "Первые гиги",
+          "value": "SPG95_7"
+        },
+        {
+          "id": "876043f1-76ae-41c1-bf67-a9de3fc84c29",
+          "label": "Первые гиги +",
+          "value": "SPGP96_4"
+        },
+        {
+          "id": "e2216895-8cc6-40d0-83e9-7e13d2c9258d",
+          "label": "Анлим 03.2019",
+          "value": "04RAPID1"
+        },
+        {
+          "id": "8d0ceca3-698f-451f-aa0b-6f1cd840191a",
+          "label": "Все Мое 2 (Для ПК)",
+          "value": "CLGDPC_2"
+        },
+        {
+          "id": "33005eae-682f-4822-af58-72e457348a99",
+          "label": "Все за 240",
+          "value": "08ALL240"
+        },
+        {
+          "id": "701147fa-4a60-462e-ab7a-f7fa6ed10499",
+          "label": "Все за 450",
+          "value": ""
+        },
+        {
+          "id": "f1e576f0-f506-43f1-a07a-ef66157cd250",
+          "label": "Все за 500",
+          "value": "74TMVSE3"
+        },
+        {
+          "id": "adac3900-a66e-4462-a82e-58d307992c83",
+          "label": "Все за 100 Эксклюзивный",
+          "value": "04MNPVSE1"
+        },
+        {
+          "id": "021248f9-17a0-480e-bf5b-6c45b9918d7b",
+          "label": "Все за 200 Эксклюзивный ",
+          "value": "04MNPVSE2"
+        },
+        {
+          "id": "e8d7b0d6-e197-4147-8137-40ec15125d84",
+          "label": "Специальный",
+          "value": "CMS1SOC19"
+        },
+        {
+          "id": "8362b57b-56a2-435c-8f7d-7a61c0feccd8",
+          "label": "Специальный (Спб)",
+          "value": "W1SOC19"
+        },
+        {
+          "id": "6e7f5786-cf1f-48e9-8178-d25b63ef9120",
+          "label": "Близкие люди 1",
+          "value": "{{e01f4fba-2280-43d0-b8c8-02413b4416f5}}"
+        },
+        {
+          "id": "57285a38-286a-465d-8037-6d1ea8a90fa7",
+          "label": "Близкие люди 2",
+          "value": "{{b228392d-81bd-4fc1-a3b6-f1843d8a5c73}}"
+        },
+        {
+          "id": "f5123902-fdf0-4af0-9fd1-95527577a066",
+          "label": "Близкие люди 3",
+          "value": "{{aac242b3-0d7a-4782-8ce5-46b42ab7eed5}}"
+        },
+        {
+          "id": "2963be2f-2bea-4f54-8643-f4db2e3e2d63",
+          "label": "Близкие люди 4",
+          "value": "{{34202ae0-09cf-4c55-a31b-8a3c9f9dffbd}}"
+        },
+        {
+          "id": "83aa8aa0-fe2b-49ec-ae8e-2b94f98ca9a2",
+          "label": "Близкие люди 5",
+          "value": "{{39ea91ad-cdc2-4ebd-a1eb-8f817ab3d3b3}}"
+        },
+        {
+          "id": "ba61f1dc-a36e-405b-800c-5563e5f3319a",
+          "label": "Близкие люди 6",
+          "value": "{{104713f5-46ce-4ba3-b823-6744adea2637}}"
+        },
+        {
+          "id": "684a7322-9c4f-4853-9bb7-afba77d20914",
+          "label": "Все за 1800 + роуминг",
+          "value": "{{5cc739cc-1cc8-47de-8c9e-762b01f0e935}}"
+        },
+        {
+          "id": "5f88cc24-088e-4555-91d2-f090e19f8077",
+          "label": "Для компьютера",
+          "value": "{{bd3a4ca7-6126-4aaa-ab4a-e65423dad2dd}}"
+        },
+        {
+          "id": "09469142-6d52-4cf2-81b5-1415ba4430d7",
+          "label": "Все Мое 2",
+          "value": "{{6f7771d1-81de-4101-957c-31cfa9af02c5}}"
+        },
+        {
+          "id": "79576a87-bf08-4a93-af90-74763560f530",
+          "label": "Все Мое 3",
+          "value": "{{96b903c1-aae3-499d-b2e3-fc9090f42c4d}}"
+        },
+        {
+          "id": "0eae3fe5-5b86-42f7-b329-2e2ae4ab2373",
+          "label": "Все Мое 4",
+          "value": "{{266100d2-1ed5-4553-a0c2-e2180024b6e5}}"
+        },
+        {
+          "id": "22a4eb70-3152-45c7-b665-c049da70e268",
+          "label": "Двойной Анлим",
+          "value": "{{6ea4c6b8-bfc9-4250-88d0-a0d2eef58f48}}"
+        },
+        {
+          "id": "55f8382c-e6da-4bf5-bb3a-bcf15db362e8",
+          "label": "Супер Анлим",
+          "value": "{{fc9c9ec8-c009-4d7b-a758-407ad8147c1b}}"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите тариф",
+      "type": "select",
+      "urlEncode": true,
+      "value": "{{441ddc16-751a-4c0a-9bd1-654812c7de2b}}"
+    },
+    {
+      "flags": 0,
+      "id": "e8e874c9-9834-4ab9-86b9-e4f731eb6a3c",
+      "jsonEncode": false,
+      "key": "vseza90",
+      "options": [
+        {
+          "id": "9b9d7416-4617-4245-845e-f7c2c766ec68",
+          "label": "СФО (06TMALL90)",
+          "value": "06TMALL90"
+        },
+        {
+          "id": "6f6d6835-a711-44c4-bb38-01f2c09e16ae",
+          "label": "ЮФО и СКФО (04CBM_1)",
+          "value": "04CBM_1"
+        },
+        {
+          "id": "53d09974-21d0-474a-b738-a1b08f51c870",
+          "label": "УРФО (08ALL90)",
+          "value": "08ALL90"
+        },
+        {
+          "id": "f3bbfa39-f706-4386-a228-3a3da39fe70a",
+          "label": "ЦФО(МОСКВА) (TMVS90)",
+          "value": "TMVS90"
+        },
+        {
+          "id": "66517302-aa95-48e9-afe9-8df06b1550e1",
+          "label": "ПФО (03TMVZ_1)",
+          "value": "03TMVZ_1"
+        },
+        {
+          "id": "e750dae2-22b1-4fc3-b1b3-6a0152cfc03a",
+          "label": "ДФО (49TM90)",
+          "value": "49TM90"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": "04CBM_1"
+    },
+    {
+      "flags": 0,
+      "id": "31068a82-beac-4dc7-bad4-85959b1ff0da",
+      "jsonEncode": false,
+      "key": "vtds2x",
+      "options": [
+        {
+          "id": "40463b9c-0efb-4e65-975c-558900b876f0",
+          "label": "ЮФО и СКФО",
+          "value": "04VSERT2X"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": "04VSERT2X"
+    },
+    {
+      "flags": 0,
+      "id": "255b6629-cd46-4e71-ab91-596211ed3411",
+      "jsonEncode": false,
+      "key": "vtds3x",
+      "options": [
+        {
+          "id": "434c756f-159a-4efd-9ff9-98ea5d14afbd",
+          "label": "ЮФО и СКФО",
+          "value": "04VSERT3X"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": "04VSERT3X"
+    },
+    {
+      "flags": 0,
+      "id": "01c701a9-e348-433d-8685-67cb46139e4e",
+      "jsonEncode": false,
+      "key": "biplus",
+      "options": [
+        {
+          "id": "cd2af279-52f2-463c-8d53-ef5941926bcf",
+          "label": "СКФО И ЮФО (SBIP95)",
+          "value": "SBIP95"
+        },
+        {
+          "id": "af72a54a-647e-4b66-9efa-4de1c92f7a11",
+          "label": "МОСКВА и МСКВ ОБЛАСТЬ (VBIP95)",
+          "value": "VBIP95"
+        },
+        {
+          "id": "35eee1cb-9eb2-4677-8144-abb8456c7f28",
+          "label": "КРАСНОЯРСКИЙ КРАЙ (EBIP951)",
+          "value": "EBIP95_1"
+        },
+        {
+          "id": "d035890a-9345-498a-96ff-6939f74c558b",
+          "label": "АМУРСКАЯ ОБЛАСТЬ (EBIP95_1)",
+          "value": "EBIP95_1"
+        },
+        {
+          "id": "3b80ed23-17a1-4e88-9a84-bc3ad6de4614",
+          "label": "АРХАНГЕЛЬСКАЯ ОБЛАСТЬ (WBIP95)",
+          "value": "WBIP95"
+        },
+        {
+          "id": "c1313002-44b3-44cc-af63-93b130541ccd",
+          "label": "БЕЛГОРОДСКАЯ ОБЛАСТЬ  (WBIP95)",
+          "value": "WBIP95"
+        },
+        {
+          "id": "de66190e-389d-4557-ad4d-507d0cb0fe6d",
+          "label": "БРЯНСКАЯ ОБЛАСТЬ (WBIP95)",
+          "value": "WBIP95"
+        },
+        {
+          "id": "03e08878-8107-4a21-89c9-cb624d114288",
+          "label": "ВЛАДИМИРСКАЯ ОБЛАСТЬ (MBIP95)",
+          "value": "MBIP95"
+        },
+        {
+          "id": "122093a2-f862-4684-86e6-569382b7a630",
+          "label": "ВОЛГОГРАДСКАЯ ОБЛАСТЬ (SBIP95)",
+          "value": "SBIP95"
+        },
+        {
+          "id": "07b056bc-9b74-4132-898e-bc740ac36400",
+          "label": "ВОЛОГОДСКАЯ ОБЛАСТЬ (WBIP95)",
+          "value": "WBIP95"
+        },
+        {
+          "id": "2581eb2f-583c-45cd-964c-8073ff97caae",
+          "label": "ВОРОНЕЖСКАЯ ОБЛАСТЬ (WBIP95)",
+          "value": "WBIP95"
+        },
+        {
+          "id": "0b409f01-2b26-431e-9832-346bd6d8fa16",
+          "label": "МУРМАНСКАЯ ОБЛАСТЬ (WBIP95)",
+          "value": "WBIP95"
+        },
+        {
+          "id": "c8484639-001d-45c5-b98d-83544ef4954f",
+          "label": "ПЕНЗЕНСКАЯ ОБЛАСТЬ (CBIP95)",
+          "value": "CBIP95"
+        },
+        {
+          "id": "750bbb3b-36bd-494a-989d-93801ebd1f5b",
+          "label": "САМАРСКАЯ ОБЛАСТЬ (CBIP95)",
+          "value": "CBIP95"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": "SBIP95"
+    },
+    {
+      "flags": 0,
+      "id": "441ddc16-751a-4c0a-9bd1-654812c7de2b",
+      "jsonEncode": false,
+      "key": "secunda",
+      "options": [
+        {
+          "id": "b27104cf-95d2-472e-96d6-8399b9d1e8ec",
+          "label": "СКФО ЮФО (04SECUNDA)",
+          "value": "04SECUNDA"
+        },
+        {
+          "id": "5bbb87f3-7b1b-42e6-bbe4-4b527e72066a",
+          "label": "АМУРСКАЯ ОБЛАСТЬ (09SECOND)",
+          "value": "09SECOND"
+        },
+        {
+          "id": "d9fd2c67-8e7e-40ab-a62c-a540489d4fff",
+          "label": "АРХАНГЕЛЬСКАЯ ОБЛАСТЬ (29SECOND)",
+          "value": "29SECOND"
+        },
+        {
+          "id": "df1b3810-1c52-489e-b2a6-93ffaa634f94",
+          "label": "БЕЛГОРОДСКАЯ ОБЛАСТЬ (31SECOND)",
+          "value": "31SECOND"
+        },
+        {
+          "id": "bc30e849-5bbf-484a-9e04-5d886ce277cd",
+          "label": "БРЯНСКАЯ ОБЛАСТЬ (32SECOND)",
+          "value": "32SECOND"
+        },
+        {
+          "id": "78d0e8a9-8200-4d8b-be65-3b6e40212d8f",
+          "label": "ВЛАДИМИРСКАЯ ОБЛАСТЬ (33SECOND)",
+          "value": "33SECOND"
+        },
+        {
+          "id": "04ac6ae6-535e-4fa7-9591-a2a9f5357901",
+          "label": "ВОЛГОГРАДСКАЯ ОБЛАСТЬ (04SECUNDA)",
+          "value": "04SECUNDA"
+        },
+        {
+          "id": "a7c0c86c-08f7-447f-9183-5bd14050d001",
+          "label": "ВОЛОГОДСКАЯ ОБЛАСТЬ (35SECOND)",
+          "value": "35SECOND"
+        },
+        {
+          "id": "e69178b1-d114-424e-85f9-1599113914bd",
+          "label": "ВОРОНЕЖСКАЯ ОБЛАСТЬ (36SECOND)",
+          "value": "36SECOND"
+        },
+        {
+          "id": "f570ba92-9a0f-47b7-bda0-87f9149dd59d",
+          "label": "МУРМАНСКАЯ ОБЛАСТЬ (51SECOND)",
+          "value": "51SECOND"
+        },
+        {
+          "id": "1f473ed4-6af2-4c5b-b9e4-42fa321acc4b",
+          "label": "ПЕНЗЕНСКАЯ ОБЛАСТЬ (58SEC0816)",
+          "value": "58SEC0816"
+        },
+        {
+          "id": "51501322-4e92-4bd5-adeb-d9052eb76bb6",
+          "label": "САМАРСКАЯ ОБЛАСТЬ (63SEC0816)",
+          "value": "63SEC0816"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": "04SECUNDA"
+    },
+    {
+      "flags": 0,
+      "id": "2c6fb305-b63d-440f-8dd5-1fb082250e32",
+      "jsonEncode": false,
+      "key": "semya",
+      "options": [
+        {
+          "id": "475cb815-fbc5-405e-ac49-c63f41144c24",
+          "label": "СКФО и ЮФО (S1FM95_3)",
+          "value": "S1FM95_3"
+        },
+        {
+          "id": "9b9f664a-632e-4320-8aab-43f68032c685",
+          "label": "КРАСНОДАРСКИЙ КРАЙ И АДЫГЕЯ(S1FM95_2)",
+          "value": "S1FM95_2"
+        },
+        {
+          "id": "a37f775e-16be-4d54-9745-d2aa62289295",
+          "label": "МОСКВА И МСКВ ОБЛАСТЬ (V1FM95)",
+          "value": "V1FM95"
+        },
+        {
+          "id": "1032766c-9e78-4778-bb44-14a7b6fcb961",
+          "label": "КРАСНОЯРСКИЙ КРАЙ (E1FM95_4)",
+          "value": "E1FM95_4"
+        },
+        {
+          "id": "f6780c1c-9389-4720-b88d-327fc5629b1e",
+          "label": "АМУРСКАЯ ОБЛАСТЬ (E1FM95_7)",
+          "value": "E1FM95_7"
+        },
+        {
+          "id": "d2471d9f-054e-4671-a29e-ef0406308993",
+          "label": "АРХАНГЕЛЬСКАЯ ОБЛАСТЬ (W1FM95_9)",
+          "value": "W1FM95_9"
+        },
+        {
+          "id": "7874d53c-eb1d-43f0-b9b3-bd5f8b58a906",
+          "label": "БЕЛГОРОДСКАЯ ОБЛАСТЬ (W1FM95_2)",
+          "value": "W1FM95_2"
+        },
+        {
+          "id": "a5b5c6f2-fc64-4364-a79a-9f2fea966266",
+          "label": "БРЯНСКАЯ ОБЛАСТЬ (W1FM95_11)",
+          "value": "W1FM95_11"
+        },
+        {
+          "id": "10c6b3ff-5c65-4fcb-8fa4-93bbe500f271",
+          "label": "ВЛАДИМИРСКАЯ ОБЛАСТЬ (M1FM95_8)",
+          "value": "M1FM95_8"
+        },
+        {
+          "id": "488a62eb-5260-4116-abc4-f82cd509bc2f",
+          "label": "ВОЛГОГРАДСКАЯ ОБЛАСТЬ (S1FM95_4)",
+          "value": "S1FM95_4"
+        },
+        {
+          "id": "968190c7-c452-4b28-bf13-e965795994e4",
+          "label": "ВОЛОГОДСКАЯ ОБЛАСТЬ (W1FM95_6)",
+          "value": "W1FM95_6"
+        },
+        {
+          "id": "ace646c4-77b6-45c2-89f6-e859d2b2084c",
+          "label": "ВОРОНЕЖСКАЯ ОБЛАСТЬ (W1FM95_3)",
+          "value": "W1FM95_3"
+        },
+        {
+          "id": "fe4be5c8-62c5-41c9-a795-b38a42a63abc",
+          "label": "МУРМАНСКАЯ ОБЛАСТЬ (W1FM95_10)",
+          "value": "W1FM95_10"
+        },
+        {
+          "id": "425fe9fa-dca1-40e5-9d78-405f985e8c9d",
+          "label": "ПЕНЗЕНСКАЯ ОБЛАСТЬ (C1FM95_4)",
+          "value": "C1FM95_4"
+        },
+        {
+          "id": "ec5c4880-1dca-4fc2-90e5-5a73aea18e8d",
+          "label": "САМАРСКАЯ ОБЛАСТЬ (C1FM95_3)",
+          "value": "C1FM95_3"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": "S1FM95_3"
+    },
+    {
+      "flags": 0,
+      "id": "9dea63f9-e683-4af2-bc82-3d1d32c95e3d",
+      "jsonEncode": false,
+      "key": "semyaplus",
+      "options": [
+        {
+          "id": "6fc08ade-50c7-48c7-8143-5c9eef490e6e",
+          "label": "СКФО И ЮФО (S2FM95_1)",
+          "value": "S2FM95_1"
+        },
+        {
+          "id": "da7e9a92-ae53-452b-a710-ffa3d1625516",
+          "label": "КРАСНОЯРСКИЙ КРАЙ (E2FM95_3)",
+          "value": "E2FM95_3"
+        },
+        {
+          "id": "9035d66a-7554-4d27-ae20-8fa198f94897",
+          "label": "АМУРСКАЯ ОБЛАСТЬ (E2FM95_2)",
+          "value": "E2FM95_2"
+        },
+        {
+          "id": "84934982-5dc7-45c9-8437-f3c1ef4e4ebc",
+          "label": "АРХАНГЕЛЬСКАЯ ОБЛАСТЬ (W2FM95_4)",
+          "value": "W2FM95_4"
+        },
+        {
+          "id": "6c79f870-43ac-4792-85c5-0ddd5b1a9e72",
+          "label": "БЕЛГОРОДСКАЯ ОБЛАСТЬ (W2FM95_2)",
+          "value": "W2FM95_2"
+        },
+        {
+          "id": "2231078d-1f6d-4eaf-8db3-0f2185ea6562",
+          "label": "БРЯНСКАЯ ОБЛАСТЬ (W2FM95_5)",
+          "value": "W2FM95_5"
+        },
+        {
+          "id": "39368fc9-5348-4355-8591-287bd3166af4",
+          "label": "ВЛАДИМИРСКАЯ ОБЛАСТЬ (M2FM95_1)",
+          "value": "M2FM95_1"
+        },
+        {
+          "id": "e6432a7e-78a5-49c2-a42c-dc464e75d609",
+          "label": "ВОЛГОГРАДСКАЯ ОБЛАСТЬ (S2FM95_1)",
+          "value": "S2FM95_1"
+        },
+        {
+          "id": "7d9753f8-0c64-4563-a3ee-55b5b63a375a",
+          "label": "ВОЛОГОДСКАЯ ОБЛАСТЬ (W2FM95_4)",
+          "value": "W2FM95_4"
+        },
+        {
+          "id": "2e4a18c4-b0db-4f70-80a2-3212e6046e66",
+          "label": "ВОРОНЕЖСКАЯ ОБЛАСТЬ (W2FM95_1)",
+          "value": "W2FM95_1"
+        },
+        {
+          "id": "4cdec83c-7d4c-47cd-831e-244bf1a0d7ed",
+          "label": "МУРМАНСКАЯ ОБЛАСТЬ (W2FM95_4)",
+          "value": "W2FM95_4"
+        },
+        {
+          "id": "e82f5393-ceef-45de-8b99-9c7ab879f9e1",
+          "label": "ПЕНЗЕНСКАЯ ОБЛАСТЬ (C2FM95_1)",
+          "value": "C2FM95_1"
+        },
+        {
+          "id": "a0a09e6c-716c-4d79-b39c-08516d4597d8",
+          "label": " САМАРСКАЯ ОБЛАСТЬ (C2FM95_1)",
+          "value": "C2FM95_1"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": "S2FM95_1"
+    },
+    {
+      "flags": 0,
+      "id": "a2bcbd63-0922-4c5c-84ae-1baf4ac08b44",
+      "jsonEncode": false,
+      "key": "supersemya",
+      "options": [
+        {
+          "id": "67cf53c2-b1d2-4118-86df-c6c8b88aa67b",
+          "label": "СКФО И ЮФО (S3FM95_1)",
+          "value": "S3FM95_1"
+        },
+        {
+          "id": "6576fac6-6bc6-4af4-85a0-6c75b3cc133f",
+          "label": "МОСКВА И МСКВ ОБЛАСТЬ (V3FM95)",
+          "value": "V3FM95"
+        },
+        {
+          "id": "23c2ec5b-f236-4cea-b3fd-66443c7c9ea8",
+          "label": "КРАСНОЯРСКИЙ КРАЙ (E3FM95_2)",
+          "value": "E3FM95_2"
+        },
+        {
+          "id": "fb4e68ad-14c1-4bfc-a082-452ffaaf98ed",
+          "label": "АМУРСКАЯ ОБЛАСТЬ (E3FM95_2)",
+          "value": "E3FM95_2"
+        },
+        {
+          "id": "43259dc6-24e2-4858-8feb-ba950f25e170",
+          "label": "АРХАНГЕЛЬСКАЯ ОБЛАСТЬ (W3FM95_2)",
+          "value": "W3FM95_2"
+        },
+        {
+          "id": "b872831b-97b1-4785-aaf6-81a0c9f0bded",
+          "label": "БЕЛГОРОДСКАЯ ОБЛАСТЬ (W3FM95_4)",
+          "value": "W3FM95_4"
+        },
+        {
+          "id": "5df39930-5a41-48f7-8d95-2aa43e25dd6f",
+          "label": "БРЯНСКАЯ ОБЛАСТЬ (W3FM95_3)",
+          "value": "W3FM95_3"
+        },
+        {
+          "id": "63fc5ff0-9954-463b-841b-4b341fbe2445",
+          "label": "ВЛАДИМИРСКАЯ ОБЛАСТЬ (M3FM95_1)",
+          "value": "M3FM95_1"
+        },
+        {
+          "id": "cf581658-ad0c-42a9-b2e5-7a33e368af48",
+          "label": "ВОЛГОГРАДСКАЯ ОБЛАСТЬ (S3FM95_1)",
+          "value": "S3FM95_1"
+        },
+        {
+          "id": "dd7a9f15-a870-4be9-8aca-e588b5872613",
+          "label": "ВОЛОГОДСКАЯ ОБЛАСТЬ (W3FM95_2)",
+          "value": "W3FM95_2"
+        },
+        {
+          "id": "c9d2879f-195c-4116-8440-57bad95e8339",
+          "label": "ВОРОНЕЖСКАЯ ОБЛАСТЬ (W3FM95_1)",
+          "value": "W3FM95_1"
+        },
+        {
+          "id": "52d342b6-f348-47f9-a73a-7b0ccd9e0345",
+          "label": "МУРМАНСКАЯ ОБЛАСТЬ (W3FM95_2)",
+          "value": "W3FM95_2"
+        },
+        {
+          "id": "6baeaf6e-4826-41c9-957c-7cf07ad23cd7",
+          "label": "ПЕНЗЕНСКАЯ ОБЛАСТЬ (C3FM95_1)",
+          "value": "C3FM95_1"
+        },
+        {
+          "id": "ef749d57-315e-42e8-bf8f-0851942e221a",
+          "label": "САМАРСКАЯ ОБЛАСТЬ (C3FM95_1)",
+          "value": "C3FM95_1"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "7c9adb94-310b-40ea-8ca7-2b98db138700",
+      "jsonEncode": false,
+      "key": "supersemyaplus",
+      "options": [
+        {
+          "id": "b897ef95-3933-4f84-8809-c22fe3fab240",
+          "label": "СКФО И ЮФО (S4FM95_1)",
+          "value": "S4FM95_1"
+        },
+        {
+          "id": "f5b4d393-1e18-4de4-854f-f527ae3c6df9",
+          "label": "МОСКВА И МСКВ ОБЛАСТЬ (V4FM95)",
+          "value": "V4FM95"
+        },
+        {
+          "id": "f4363e7b-7019-4046-8e2e-2dff4f27e954",
+          "label": "КРАСНОЯРСКИЙ КРАЙ (E4FM95_1)",
+          "value": "E4FM95_1"
+        },
+        {
+          "id": "6944ccf8-9774-4d4f-a0c0-7b667f21edae",
+          "label": "АМУРСКАЯ ОБЛАСТЬ (E4FM95_1)",
+          "value": "E4FM95_1"
+        },
+        {
+          "id": "2b86bc2f-1abb-4190-ad4e-8096b94f98ea",
+          "label": "АРХАНГЕЛЬСКАЯ ОБЛАСТЬ (W4FM95)",
+          "value": "W4FM95"
+        },
+        {
+          "id": "9a3f9b30-2d42-42af-8088-b3ae12421b07",
+          "label": "БЕЛГОРОДСКАЯ ОБЛАСТЬ (W4FM95_1)",
+          "value": "W4FM95_1"
+        },
+        {
+          "id": "917d2ca0-465e-4478-b265-faabcc417291",
+          "label": "БРЯНСКАЯ ОБЛАСТЬ (W4FM95_1)",
+          "value": "W4FM95_1"
+        },
+        {
+          "id": "40b7e1f8-5f60-4887-8c57-98ff7b0c7b1e",
+          "label": "ВЛАДИМИРСКАЯ ОБЛАСТЬ (M4FM95_1)",
+          "value": "M4FM95_1"
+        },
+        {
+          "id": "a5f6fc95-5de5-4fbc-82ea-4ddb65fa4c3d",
+          "label": "ВОЛГОГРАДСКАЯ ОБЛАСТЬ (S4FM95_1)",
+          "value": "S4FM95_1"
+        },
+        {
+          "id": "fb1a9179-a003-4915-be0e-9eec5126ab7f",
+          "label": "ВОЛОГОДСКАЯ ОБЛАСТЬ (W4FM95)",
+          "value": "W4FM95"
+        },
+        {
+          "id": "2607d1b6-42ce-4b93-803d-86b84026f19f",
+          "label": "ВОРОНЕЖСКАЯ ОБЛАСТЬ (W4FM95)",
+          "value": "W4FM95"
+        },
+        {
+          "id": "53b118f0-0da5-4ac1-9e7d-6b3fd0bb41ce",
+          "label": "МУРМАНСКАЯ ОБЛАСТЬ (W4FM95)",
+          "value": "W4FM95"
+        },
+        {
+          "id": "90e19cd0-3f3e-41be-84c1-a023fceb32e0",
+          "label": "ПЕНЗЕНСКАЯ ОБЛАСТЬ (C4FM95_1)",
+          "value": "C4FM95_1"
+        },
+        {
+          "id": "c80daf9d-4a9d-4c93-ad4a-cd7c59609362",
+          "label": "САМАРСКАЯ ОБЛАСТЬ (C4FM95_1)",
+          "value": "C4FM95_1"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": "S4FM95_1"
+    },
+    {
+      "flags": 0,
+      "id": "a5a38c9f-395c-406c-9e43-8d48fba73fab",
+      "jsonEncode": false,
+      "key": "pogovorim",
+      "options": [
+        {
+          "id": "cc3100b5-338b-40d5-bded-a11cf784ac15",
+          "label": "ДРУГИЕ РЕГИОНЫ (LETSTALK)",
+          "value": "LETSTALK"
+        },
+        {
+          "id": "55613d8e-b566-4bd6-9f7a-1ca3834e31cd",
+          "label": "МОСКВА и МСКВ ОБЛАСТЬ (VLETSTALK)",
+          "value": "VLETSTALK"
+        },
+        {
+          "id": "e4b5587e-cf4f-437a-960d-38b91b2bc655",
+          "label": "АМУРСКАЯ ОБЛАСТЬ (ELETSTALK)",
+          "value": "ELETSTALK"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": "LETSTALK"
+    },
+    {
+      "flags": 0,
+      "id": "7f5332ab-479f-4faa-b746-99fa2050f40e",
+      "jsonEncode": false,
+      "key": "posecund",
+      "options": [
+        {
+          "id": "0341db99-5dab-43fd-8916-02d750991238",
+          "label": "ТАРИФ ПОСЕКУНДНЫЙ МОСКВА И МСКВ ОБЛАСТЬ (SECOND)",
+          "value": "SECOND"
+        }
+      ],
+      "rememberValue": false,
+      "title": "",
+      "type": "select",
+      "urlEncode": false,
+      "value": "SECOND"
+    },
+    {
+      "flags": 0,
+      "id": "9b5c2c5f-c13e-49c5-a1cd-6ec93a431117",
+      "jsonEncode": false,
+      "key": "yugseb",
+      "options": [
+        {
+          "id": "7283b6b5-c1ac-4863-8d2e-793a56b075a2",
+          "label": "СКФО (YUG_SEB)",
+          "value": "YUG_SEB"
+        },
+        {
+          "id": "e00fc77e-8169-4eef-8cc1-a4c9a2548c0a",
+          "label": "МОСКВА И МСКВ ОБЛАСТЬ (VSE_SEB)",
+          "value": "VSE_SEB"
+        },
+        {
+          "id": "b7c38cff-56c8-4a34-84bc-4eb7942777b2",
+          "label": "Урал/Челябинск",
+          "value": "74SEB"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": "YUG_SEB"
+    },
+    {
+      "flags": 0,
+      "id": "63dbebf8-7b67-4d17-beb2-145c16860091",
+      "jsonEncode": false,
+      "key": "semyaacciya",
+      "options": [
+        {
+          "id": "8f8ac065-d9db-4e2d-a31c-2bf390c36d2e",
+          "label": "АРХАНГЕЛЬСКАЯ ОБЛАСТЬ (W0FM95_3)",
+          "value": "W0FM95_3"
+        },
+        {
+          "id": "dcc51f7a-5dd3-4ab3-a8a2-68d7964a9302",
+          "label": "ВОЛОГОДСКАЯ ОБЛАСТЬ (W0FM95_4)",
+          "value": "W0FM95_4"
+        },
+        {
+          "id": "8ae20096-480f-44c6-ac27-e0b682738287",
+          "label": "ВОРОНЕЖСКАЯ ОБЛАСТЬ (W0FM95_1)",
+          "value": "W0FM95_1"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Выберите регион",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "082723ad-14cf-4a1c-92dd-b990892f8132",
+      "jsonEncode": false,
+      "key": "newpassword",
+      "options": [],
+      "rememberValue": false,
+      "title": "Введите новый пароль",
+      "type": "text",
+      "urlEncode": true,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "e2438a2b-75b3-4ea8-b188-925f0562e7a9",
+      "jsonEncode": false,
+      "key": "noproverka",
+      "options": [
+        {
+          "id": "6fc22bdf-bf18-40c5-b878-e00e1b50add2",
+          "label": "Пакет 15 гб",
+          "value": "DBL_15GBS"
+        },
+        {
+          "id": "9995e15e-48d5-4964-92a6-48cf2e2f3a40",
+          "label": "Можно Всё",
+          "value": "FREMUZDTM"
+        },
+        {
+          "id": "6c25f71d-0412-4452-98a8-6c5c0dd6962b",
+          "label": "Пакет 150 гб за 52 рубля в месяц ",
+          "value": "150GB50"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Не проверенные",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "c767bc2b-7949-427a-a562-a5f6511126c1",
+      "jsonEncode": false,
+      "key": "vtds",
+      "options": [
+        {
+          "id": "fa3d1729-a7bc-4bbf-9b72-e6801cf28cba",
+          "label": "СФО",
+          "value": "06VSERLTS"
+        },
+        {
+          "id": "64c6e975-a30e-4302-90e3-a5bf930d4662",
+          "label": "ЮФО и СКФО",
+          "value": "04VSERTLS"
+        },
+        {
+          "id": "8f3860b2-b8ff-482b-a4a3-4e61c20b7eeb",
+          "label": "ДФО",
+          "value": "09VSERTLS"
+        },
+        {
+          "id": "b63734de-c023-484e-b4de-083b3b030a0d",
+          "label": "УРФО",
+          "value": "CNTVSRLTS"
+        },
+        {
+          "id": "69e228d3-1cee-4905-84cc-50bc7ac4bbb1",
+          "label": "ЦФО (Москва)",
+          "value": "VIPVSRLTS"
+        },
+        {
+          "id": "bd1cdf21-6468-4cd4-b88c-565f9603fcdb",
+          "label": "ЦФО (Рязань , Владимир)",
+          "value": "BMVSRLTS"
+        },
+        {
+          "id": "659e6b9a-b701-40cb-9263-a98a430f27b5",
+          "label": "ЦФО (Брянск)",
+          "value": "BRNVSRLTS"
+        },
+        {
+          "id": "b74b9b62-efce-49c3-91fd-12b93df6f1c8",
+          "label": "ПФО",
+          "value": "CNTVSRLTS"
+        },
+        {
+          "id": "766d3505-49fc-4ca0-88e7-8d555547a4a3",
+          "label": "ПФО (Нижний Новгород)",
+          "value": "NNGVSRLTS"
+        },
+        {
+          "id": "9439e1eb-0f1d-4c8b-ac48-e74da36ae886",
+          "label": "СЗФО",
+          "value": "SZVSRLTS"
+        },
+        {
+          "id": "deba5a08-c47b-46be-a036-df004447e376",
+          "label": "СХФО (Питер)",
+          "value": "SPBVSRLTS"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Все только для своих",
+      "type": "select",
+      "urlEncode": false,
+      "value": "06VSERLTS"
+    },
+    {
+      "flags": 0,
+      "id": "e01f4fba-2280-43d0-b8c8-02413b4416f5",
+      "jsonEncode": false,
+      "key": "bliz1",
+      "options": [
+        {
+          "id": "afcdf1f2-033b-482d-b77a-5f631ff87db6",
+          "label": "ЦФО",
+          "value": "V1BL20"
+        },
+        {
+          "id": "07d56800-8d95-4268-8476-08746d31eb52",
+          "label": "СЗФО",
+          "value": "W1BL20_8"
+        },
+        {
+          "id": "41eb8a97-6bda-4730-b3a8-f10cc2322af2",
+          "label": "ЮФО",
+          "value": "S1BL20_5"
+        },
+        {
+          "id": "77620b47-ebd7-4bb8-b341-13dafe788962",
+          "label": "СКФО",
+          "value": "S1BL20_3"
+        },
+        {
+          "id": "3a44f1bf-746a-4112-ba46-6f63d6d19b02",
+          "label": "ПФО",
+          "value": "C1BL20_7"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Близкие люди 1",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "data": "{\"time\":{\"format\":\"HH:mm\"}}",
+      "flags": 0,
+      "id": "b228392d-81bd-4fc1-a3b6-f1843d8a5c73",
+      "jsonEncode": false,
+      "key": "bliz2",
+      "options": [
+        {
+          "id": "72c9b52d-dac5-43c0-bc2a-05642ece24d5",
+          "label": "ЦФО",
+          "value": "V2BL20"
+        },
+        {
+          "id": "5972a8b0-92a0-4a2a-8223-c85207bd4695",
+          "label": "СЗФО",
+          "value": "W2BL20_8"
+        },
+        {
+          "id": "2033539a-18f7-4bca-93ab-af5aba030288",
+          "label": "ЮФО",
+          "value": "S2BL20_3"
+        },
+        {
+          "id": "69d46280-081e-4e76-8d71-4270201ce73b",
+          "label": "СКФО",
+          "value": "S2BL20_1"
+        },
+        {
+          "id": "c3589a73-db78-4df6-aa67-5d1cb7adb5b1",
+          "label": "ПФО",
+          "value": "C2BL20_8"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Близкие люди 2",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "5cc739cc-1cc8-47de-8c9e-762b01f0e935",
+      "jsonEncode": false,
+      "key": "vse1800",
+      "options": [
+        {
+          "id": "e3b356b6-6ac9-4387-b55b-8d93c6f365a1",
+          "label": "ЦФО",
+          "value": "RFVSEROAM"
+        },
+        {
+          "id": "1eb19538-17c8-4220-bd55-8d5606164601",
+          "label": "СЗФО",
+          "value": "WVSEROAM"
+        },
+        {
+          "id": "7e515428-5fe3-42a0-bf0e-23bbb8b5638d",
+          "label": "ЮФО",
+          "value": "YVSEROAM"
+        },
+        {
+          "id": "a4a8d261-96be-4990-bcc5-8c2bfc0015b5",
+          "label": "СКФО",
+          "value": "YVSEROAM"
+        },
+        {
+          "id": "457ce5cb-4c03-423f-b205-6024dc62f44c",
+          "label": "ПФО",
+          "value": "52VSEROAM"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Все за 1800+роуминг",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "bd3a4ca7-6126-4aaa-ab4a-e65423dad2dd",
+      "jsonEncode": false,
+      "key": "dlyakomp",
+      "options": [
+        {
+          "id": "20f0ad30-e89b-4a4d-b903-092b7831c77d",
+          "label": "ЦФО",
+          "value": "RF4DATA19"
+        },
+        {
+          "id": "b141c393-5856-44e6-8a34-ba9312d079ca",
+          "label": "СЗФО",
+          "value": "RF3DATA19"
+        },
+        {
+          "id": "c8c168f8-5f7a-4e43-9da5-47e46ae6d44b",
+          "label": "ЮФО",
+          "value": "RFDATA19"
+        },
+        {
+          "id": "6de5aadc-7f0f-4514-953e-a4e7e4ceee3d",
+          "label": "СКФО",
+          "value": "RFDATA19"
+        },
+        {
+          "id": "23e15377-3050-49cf-a187-4130f32e70d7",
+          "label": "ПФО",
+          "value": "RF2DATA19"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Для компьютера",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "6f7771d1-81de-4101-957c-31cfa9af02c5",
+      "jsonEncode": false,
+      "key": "vsemoe2",
+      "options": [
+        {
+          "id": "eb7570ba-7442-4947-8c22-54796fd9ff34",
+          "label": "ЮФО",
+          "value": "04LEGO_2"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Все Мое 2",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "96b903c1-aae3-499d-b2e3-fc9090f42c4d",
+      "jsonEncode": false,
+      "key": "vsemoe3",
+      "options": [
+        {
+          "id": "32ce67bd-9309-4546-8f0a-5f3b6ebb979d",
+          "label": "ЮФО",
+          "value": "04LEGO_3"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Все Мое 3",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "266100d2-1ed5-4553-a0c2-e2180024b6e5",
+      "jsonEncode": false,
+      "key": "vsemoe4",
+      "options": [
+        {
+          "id": "5d22ed16-c476-4dff-88c5-29bacd9639a0",
+          "label": "ЮФО",
+          "value": "04LEGO_4"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Все Мое 4",
+      "type": "select",
+      "urlEncode": false,
+      "value": "04LEGO_4"
+    },
+    {
+      "flags": 0,
+      "id": "6ea4c6b8-bfc9-4250-88d0-a0d2eef58f48",
+      "jsonEncode": false,
+      "key": "dvanlim",
+      "options": [
+        {
+          "id": "7e68dff8-3d77-4b16-8107-19b819788c86",
+          "label": "ЮФО",
+          "value": "S1LG19_1"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Двойной Анлим",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "fc9c9ec8-c009-4d7b-a758-407ad8147c1b",
+      "jsonEncode": false,
+      "key": "superanlim",
+      "options": [
+        {
+          "id": "e999567c-54b7-4c9a-9fa0-3fbdf315256e",
+          "label": "ЮФО",
+          "value": "SSANL19_2"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Супер Анлим",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "aac242b3-0d7a-4782-8ce5-46b42ab7eed5",
+      "jsonEncode": false,
+      "key": "bliz3",
+      "options": [
+        {
+          "id": "79b07d00-e71d-4173-bb0e-ee53e5ee1b71",
+          "label": "ЦФО",
+          "value": "V3BL20"
+        },
+        {
+          "id": "2e538c77-c937-4f7a-801b-0ea8579cdcb6",
+          "label": "СЗФО",
+          "value": "W3BL20_8"
+        },
+        {
+          "id": "a76c4666-3311-40c1-bb7d-049f9612e9d8",
+          "label": "ЮФО",
+          "value": "S3BL20_2"
+        },
+        {
+          "id": "1a448447-6b81-4422-89dd-bac2ff9a77ad",
+          "label": "СКФО",
+          "value": "S3BL20_2"
+        },
+        {
+          "id": "1768d17a-e424-419e-b35d-d823936f438e",
+          "label": "ПФО",
+          "value": "C3BL20_1"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Близкие люди 3",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "34202ae0-09cf-4c55-a31b-8a3c9f9dffbd",
+      "jsonEncode": false,
+      "key": "bliz4",
+      "options": [
+        {
+          "id": "f023817a-b23b-4352-975b-091ba750fa75",
+          "label": "ЦФО",
+          "value": "V4BL20"
+        },
+        {
+          "id": "f8b91ba3-abab-4efe-a6ed-b470bcc747a8",
+          "label": "СЗФО",
+          "value": "W4BL20_8"
+        },
+        {
+          "id": "90abb045-6beb-45be-884d-56eba72d7c5c",
+          "label": "ЮФО",
+          "value": "S4BL20"
+        },
+        {
+          "id": "b4211bd6-ef2b-41cc-9a9e-e5e35003b4c9",
+          "label": "СКФО",
+          "value": "S4BL20"
+        },
+        {
+          "id": "7ba3e8b6-3d99-4213-93dd-1b0f2a291242",
+          "label": "ПФО",
+          "value": "C4BL20"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Близкие люди 4",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "39ea91ad-cdc2-4ebd-a1eb-8f817ab3d3b3",
+      "jsonEncode": false,
+      "key": "bliz5",
+      "options": [
+        {
+          "id": "afb61391-911e-415a-9e75-e5f4659595c5",
+          "label": "ЦФО",
+          "value": "V5BL20"
+        },
+        {
+          "id": "b3d228f4-f33e-4500-af91-a4f483d2dce2",
+          "label": "СЗФО",
+          "value": "W5BL20"
+        },
+        {
+          "id": "ad9cc20c-7cc0-41d5-8f30-1ac442a56611",
+          "label": "ЮФО",
+          "value": "S5BL20"
+        },
+        {
+          "id": "37ea1926-93af-43ec-b0b9-a1943e57a33f",
+          "label": "СКФО",
+          "value": "S6BL20"
+        },
+        {
+          "id": "ff90a162-cb44-425d-8a58-3f3b9911088e",
+          "label": "ПФО",
+          "value": "C5BL20_2"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Близкие люди 5",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    },
+    {
+      "flags": 0,
+      "id": "104713f5-46ce-4ba3-b823-6744adea2637",
+      "jsonEncode": false,
+      "key": "bliz6",
+      "options": [
+        {
+          "id": "b6642ed9-a6f4-4db8-a887-2dec5e9a48c1",
+          "label": "СЗФО",
+          "value": "W6BL20"
+        },
+        {
+          "id": "13fa4771-ae69-4a48-ba17-342726660f4d",
+          "label": "ЮФО",
+          "value": "S6BL20"
+        },
+        {
+          "id": "60716757-adf4-4f52-888c-cc519434e5a1",
+          "label": "СКФО",
+          "value": "S6BL20"
+        },
+        {
+          "id": "105bda3b-0392-4810-bcb9-c571f6cca438",
+          "label": "ПФО",
+          "value": "C6BL20"
+        }
+      ],
+      "rememberValue": false,
+      "title": "Близкие люди 6",
+      "type": "select",
+      "urlEncode": false,
+      "value": "S6BL20"
+    },
+    {
+      "flags": 0,
+      "id": "fe687c14-3821-4e84-a9ef-b6f27923e34a",
+      "jsonEncode": false,
+      "key": "idbilling20008",
+      "options": [
+        {
+          "id": "b564e746-199d-4d6e-aace-68b029f952e5",
+          "label": "Не трогать",
+          "value": ""
+        }
+      ],
+      "rememberValue": false,
+      "title": "",
+      "type": "select",
+      "urlEncode": false,
+      "value": ""
+    }
+  ],
+  "version": 28
+}
