@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html> 
  <body>
+<h1>Моя Первая Веб Страница</h1>
+<p>Мой Первый Параграф</p>
+
+<p id="demo"></p>
  <script>
  var ver = {
     version: 1.0
 }
-var serializedUser = JSON.stringify(var);
-document.write(serializedUser);
+var serializedUser = JSON.stringify(ver);
+document.getElementById("demo").innerHTML = serializedUser
  </script>
  </body>
 </html>
