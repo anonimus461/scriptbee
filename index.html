@@ -10,7 +10,8 @@
     version: 1.0
 }
 var serializedUser = JSON.stringify(ver);
-document.getElementById("demo").innerHTML = serializedUser
+var tomUser = JSON.parse(serializedUser);
+document.getElementById("demo").innerHTML = tomUser
  </script>
  </body>
 </html>
