@@ -1,6 +1,6 @@
-{version: 28}
+{"version": 28}
 var user = {
-    name: "Tom",
-    married: true,
-    age: 30
+    "name": "Tom",
+    "married": true,
+    "age": 30
 };
