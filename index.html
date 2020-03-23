@@ -19,3 +19,69 @@
   </ div > 
   < hr > 
 </ template >
+// Распространение шаблона.
+( функция  ( селектор )  {
+  var  template  =  документ  . querySelector  ( селектор ) ;
+  var  arrayDataProvider  =  getJsonAsArray  ( ) ;
+  arrayDataProvider . forEach  ( function  ( element )  {
+    var  templateClone  =  template . содержание . cloneNode  (  true  ) ;
+    templateClone . querySelector  (  '.name> span'  )  . textContent  +  =
+       ''  +  элемент . имя ;
+    templateClone . querySelector  (  '.age> пядь'  )  . textContent  +  =
+       ''  +  элемент . возраст ;
+    templateClone . querySelector  (  '.EMAIL> пядь'  )  . textContent  +  =
+       ''  +  элемент . электронная почта ;
+    templateClone . querySelector  (  '.phone> пядь'  )  . textContent  +  =
+       ''  +  элемент . телефон ;
+    templateClone . querySelector  (  '.Address> пядь'  )  . textContent  +  =
+       ''  +  элемент . адрес ;
+    документ  . тело . appendChild  ( templateClone ) ;
+  } ) ;
+} )  (  '# table-template'  ) ;
+
+function  getJsonAsArray  ( )  {
+  вернуть  JSON . parse  ( `[
+    {
+      "имя": "Иван",
+       "возраст": "32",
+       "электронная почта": "ivan@ivanov.ru",
+       "телефон": "+7 (954) 148-45-73",
+       "адрес": "Торфяная ул. 7/4"
+    },
+    {
+      "имя": "Екатерина",
+       "возраст": "24",
+       "электронная почта": "katja@yandex.ru",
+       "телефон": "+7 (956) 172-12-23",
+       "адрес": "Никитинская ул. 12б"
+    },
+    {
+      "имя": "Федор",
+       "возраст": "45",
+       "электронная почта": "fedor@sidirov.ru",
+       "телефон": "+7 (911) 760-45-35",
+       "адрес": "Ленинский пр-т. 74/3"
+    },
+    {
+      "имя": "Станислав",
+       "возраст": "19",
+       "электронная почта": "stas@fedorov.ru",
+       "телефон": "+7 (954) 343-55-55",
+       "адрес": "Московский пр-т. 14/4"
+    },
+    {
+      "имя": "Евгений",
+       "возраст": "28",
+       "электронная почта": "evgeny@gmail.com",
+       "телефон": "+7 (918) 577-98-89",
+       "адрес": "Советская ул. 60"
+    },
+    {
+      "имя": "Елена",
+       "возраст": "22",
+       "электронная почта": "elena@mail.ru",
+       "телефон": "+7 (931) 466-77-19",
+       "адрес": "Есенина ул. 4"
+    }
+  ] ` ) ;
+}
