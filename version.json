@@ -1,6 +1,5 @@
-{"version": 28}
-var user = {
+{
     "name": "Tom",
     "married": true,
     "age": 30
-};
+}
