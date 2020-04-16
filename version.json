@@ -1,7 +1,1 @@
-let student = {
-  name: 'John',
-  age: 30,
-  isAdmin: false,
-  courses: ['html', 'css', 'js'],
-  wife: null
-};
+{"ver":1.3}
